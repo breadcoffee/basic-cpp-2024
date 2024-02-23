@@ -22,9 +22,29 @@
 		- int Adder(int num1 = 1, int num2 = 2)
 		
 	- Inline 함수
-		- 매크로 함수 #define SQUARE(x) ((x)*(x))
 		- inline int SQUARE(int x) {return x * x;}
-		
+		- inline 함수 호출 시 그 자리에 인라인 함수 코드 자체가 안으로 들어간다.
+		```c+
+			#include <iostream>
+
+			inline void PrintHello() {
+				cout << "Hello, World" << endl;
+			}
+
+			int main() {
+				PrintHello();
+				PrintHello();
+				return 0;
+			}
+			
+			#include <iostream>
+
+			int main() {
+				cout << "Hello, World" << endl;
+				cout << "Hello, World" << endl;
+				return 0;
+			}
+		```
 	- NameSpace
 		- 서로 같은 이름의 함수를 정의할 때 구분짓기 위해 사용
 	
@@ -37,3 +57,13 @@
 	- 참조자 변수
 		- int& rnum = num;
 		- 참조자는 변수에 대해서만 선언이 가능하다.
+		
+## 3일차
+- C++ 표준함수
+	- new
+		- heap 영역에 데이터를 저장하는 공간을 생성한다.
+	- delete
+		- heap 영역에 비어있는 공간을 반환한다.
+	
+- 클래스
+	- enum
