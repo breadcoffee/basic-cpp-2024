@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cstring>
 using namespace std;
 
 namespace CAR_CONST {
@@ -12,27 +12,36 @@ namespace CAR_CONST {
 	};
 }
 
-struct Car {
+class Car {
+	// 멤버변수, 필드, 속성
+private:
 	char gamerID[CAR_CONST::ID_LEN];
 	int fuelGauge;
 	int carSpeed;
-
+	//멤버함수, 메서드, 기능
+public:
+	void InitMembers(const char* ID, int fuel);
 	void ShowCarState();	// 상태정보 출력
 	void Accel();			// 엑셀, 속도증가
 	void Break();			// 브레이크, 속도감소
 };
-// 구조체 안에 있는 함수의 정의를 구조체 밖에서 정의한다.
-// 구조체 안에 정의하면 inline함수로 사용된다.
-// 구조체 밖에서도 inline함수처럼 사용하려면 inline함수로 정의해주면 된다.
+
+void Car::InitMembers(const char* ID, int fuel) {
+	strcpy(gamerID, ID); //전달된 ID의 문자열을 gamerID에 저장
+	fuelGauge = fuel;
+	carSpeed = 0;
+}
+
 void Car::ShowCarState() {
 	cout << "소유자ID: " << gamerID << endl;
-	cout << "연료량: " << fuelGauge << endl;
-	cout << "현재속도: " << carSpeed << endl;
+	cout << "연료량: " << fuelGauge << "%" << endl;
+	cout << "현재속도: " << carSpeed <<"km/s" << endl << endl;
 }
 
 void Car::Accel() {
 	if (fuelGauge <= 0) return;
 	else fuelGauge -= CAR_CONST::FUEL_STEP;
+
 	if ((carSpeed + CAR_CONST::ACC_STEP) >= CAR_CONST::MAX_SPD) {
 		carSpeed = CAR_CONST::MAX_SPD;
 		return;
@@ -49,18 +58,14 @@ void Car::Break() {
 }
 
 int main() {
-	Car run99 = { "run99", 100, 0 };
+	Car run99;							// class car타입의 객체생성
+	run99.InitMembers("run99", 100);	// run99객체의 InitMembers() 메서드 호출
+	run99.Accel();
 	run99.Accel();
 	run99.Accel();
 	run99.ShowCarState();
 	run99.Break();
 	run99.ShowCarState();
-	cout << endl;
-
-	Car sped77 = { "run77", 100, 0 };
-	sped77.Accel();
-	sped77.Break();
-	sped77.ShowCarState();
 
 	return 0;
 }
