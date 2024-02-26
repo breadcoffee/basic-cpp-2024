@@ -86,19 +86,19 @@
  
 		- Getter & Setter
 	```C++
-		class MyClass {
-		private:
-			int myData; // private 멤버 변수
+class MyClass {
+private:
+	int myData; // private 멤버 변수
 
-		public:
-			void setData(int data) { // public 멤버 함수
-				myData = data;
-			}
+public:
+	void setData(int data) { // public 멤버 함수
+		myData = data;
+	}
 
-			int getData() { // public 멤버 함수
-				return myData;
-			}
-		};
+	int getData() { // public 멤버 함수
+		return myData;
+	}
+};
 	```
 		
 	- 캡슐화
