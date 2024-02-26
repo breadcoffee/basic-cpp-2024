@@ -49,7 +49,7 @@ int main(){
 	sufferer.TakeSinivelCap(scap);
 	sufferer.TakeSneezeCap(zcap);
 	sufferer.TakeSnuffleCap(ncap);*/
-
+	
 	CONTAC600 cap;
 	ColdPatient sufferer;
 	sufferer.TakeCONTAC600(cap);

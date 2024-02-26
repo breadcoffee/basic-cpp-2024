@@ -33,6 +33,18 @@
     <ClCompile Include="test32_Encaps1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="test33_Constructor1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test34_Constructor2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test35_FruitSakeSim2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test36_StudentConst.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test30_PointHiding.h">

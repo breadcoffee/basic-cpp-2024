@@ -109,7 +109,11 @@
 		
 		- 생성자 & 소멸자
 	```C++
-		MyClass obj;
-		obj.setData(10);
-		int value = obj.getData();
+	MyClass obj;
+	obj.setData(10);
+	int value = obj.getData();
 	```
+	
+	- 멤버 이니셜라이저
+		- 객체 생성시 초기화되지않는 멤버들을 초기화할 때 사용한다.
+		- 생성과 동시에 초기화하기때문에 const도 사용 가능하다.
