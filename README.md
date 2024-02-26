@@ -76,8 +76,8 @@
 - 클래스 심화
 	- 클래스 기반 두가지 객체생성 방법
 		- 일반적인 변수의 선언 방식 
-		- >ClassName objName;
+		-> ClassName objName;
 		- 동적 할당방식	
-		- >ClassName* ptrObj = new ClassName;
+		-> ClassName* ptrObj = new ClassName;
 		
 	- 정보은닉
