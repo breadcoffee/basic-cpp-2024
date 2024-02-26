@@ -85,30 +85,31 @@
 		- 클래스 내에서 private으로 선언된 멤버 변수와 멤버 함수는 클래스 외부에서 직접 접근할 수 없고 클래스 내부에서만 사용할 수 있다.
  
 		- Getter & Setter
-		```C++
-			class MyClass {
-			private:
-				int myData; // private 멤버 변수
+```C++
+	class MyClass {
+	private:
+		int myData; // private 멤버 변수
 
-			public:
-				void setData(int data) { // public 멤버 함수
-					myData = data;
-				}
+	public:
+		void setData(int data) { // public 멤버 함수
+			myData = data;
+		}
 
-				int getData() { // public 멤버 함수
-					return myData;
-				}
-			};
-		```
+		int getData() { // public 멤버 함수
+			return myData;
+		}
+	};
+```
 		
 	- 캡슐화
 		- 객체의 속성과 행위를 하나로 묶어 추상화와 재사용의 단위가 된다.
 		- 객체 요소로의 접근을 제한을 통해 실제 구현 내용 일부를 감추는 것이다.
-		- C++에서 캡슐화는 클래스를 사용하여 객체를 생성하고, 객체의 멤버 변수와 멤버 함수를 함께 묶어 캡슐 안에 담는 것을 의미한다. 외부에서는 캡슐의 내부 구조를 알 수 없고 오직 public으로 선언된 멤버 함수를 통해서만 객체와 상호 작용할 수 있다.
+		- C++에서 캡슐화는 클래스를 사용하여 객체를 생성하고, 객체의 멤버 변수와 멤버 함수를 함께 묶어 캡슐 안에 담는 것을 의미한다. 
+		- 외부에서는 캡슐의 내부 구조를 알 수 없고 오직 public으로 선언된 멤버 함수를 통해서만 객체와 상호 작용할 수 있다.
 		
 		- 생성자 & 소멸자
-		```C++
-			MyClass obj;
-			obj.setData(10);
-			int value = obj.getData();
-		```
+```C++
+	MyClass obj;
+	obj.setData(10);
+	int value = obj.getData();
+```
