@@ -21,5 +21,25 @@
     <ClCompile Include="test29_RectangleFault.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="test30_PointHiding.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test31_RectangleHiding.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test31_RectangleFaultFind.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test32_Encaps1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test30_PointHiding.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="test31_RectangleHiding.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
