@@ -16,8 +16,8 @@ public:
 };
 
 int main() {
-	const SoSimple obj(7);	// ÀÌ °´Ã¼ÀÇ µ¥ÀÌÅÍ º¯°æÀ» Çã¿ëÇÏÁö ¾Ê´Â´Ù.
-	//obj.AddNum(20);		// const ¸â¹öÇÔ¼öÀÇ È£Ãâ¸¸ Çã¿ë
+	const SoSimple obj(7);	// ì´ ê°ì²´ì˜ ë°ì´í„° ë³€ê²½ì„ í—ˆìš©í•˜ì§€ ì•ŠëŠ”ë‹¤.
+	//obj.AddNum(20);		// const ë©¤ë²„í•¨ìˆ˜ì˜ í˜¸ì¶œë§Œ í—ˆìš©
 	obj.ShowData();
 
 	return 0;

@@ -18,7 +18,7 @@ public:
 
 SoSimple SimpleFuncObj(SoSimple ob) {
 	cout << "Parm ADR: " << &ob << endl;
-	return ob;								// ob¸¦ ¹ÝÈ¯ÇÏ´Ï ÀÓ½Ã°´Ã¼°¡ »ý¼ºµÊ
+	return ob;								// obç”« é¦†åˆ¸çªèª çƒ™çŸ«æŒ‰çœ‰å•Š ç§¯å·±å‡³
 }
 
 int main() {
@@ -31,19 +31,19 @@ int main() {
 
 	return 0;
 }
-/* Ãâ·Â
-New Object: 0000004EE473FA44	:	25Çà °´Ã¼ obj »ý¼º
-New Copy Obj: 0000004EE473FB44	:	°´Ã¼ ob1 »ý¼º
-Parm ADR: 0000004EE473FB44		:	°´Ã¼ ob1 ÁÖ¼Ò
-New Copy Obj: 0000004EE473FB84	:	ÀÓ½Ã°´Ã¼1 »ý¼º
-Destroy obj: 0000004EE473FB44	:	°´Ã¼ ob1 ¼Ò¸ê
-Destroy obj: 0000004EE473FB84	:	ÀÓ½Ã°´Ã¼1 ¼Ò¸ê
+/* å…ä»¿
+New Object: 0000004EE473FA44	:	25é’ æŒ‰çœ‰ obj ç§¯å·±
+New Copy Obj: 0000004EE473FB44	:	æŒ‰çœ‰ ob1 ç§¯å·±
+Parm ADR: 0000004EE473FB44		:	æŒ‰çœ‰ ob1 æž—å®¶
+New Copy Obj: 0000004EE473FB84	:	çƒ™çŸ«æŒ‰çœ‰1 ç§¯å·±
+Destroy obj: 0000004EE473FB44	:	æŒ‰çœ‰ ob1 å®¶æˆˆ
+Destroy obj: 0000004EE473FB84	:	çƒ™çŸ«æŒ‰çœ‰1 å®¶æˆˆ
 
-New Copy Obj: 0000004EE473FBA4	:	°´Ã¼ ob2 »ý¼º
-Parm ADR: 0000004EE473FBA4		:	°´Ã¼ ob2 ÁÖ¼Ò
-New Copy Obj: 0000004EE473FA64	:	ÀÓ½Ã°´Ã¼2 »ý¼º
-Destroy obj: 0000004EE473FBA4	:	°´Ã¼ ob2 ¼Ò¸ê
-Return Obj 0000004EE473FA64		:	ÀÓ½Ã°´Ã¼2 ÁÖ¼Ò
-Destroy obj: 0000004EE473FA64	:	ÀÓ½Ã°´Ã¼2 ¼Ò¸ê
-Destroy obj: 0000004EE473FA44	:	25Çà °´Ã¼ obj ¼Ò¸ê
+New Copy Obj: 0000004EE473FBA4	:	æŒ‰çœ‰ ob2 ç§¯å·±
+Parm ADR: 0000004EE473FBA4		:	æŒ‰çœ‰ ob2 æž—å®¶
+New Copy Obj: 0000004EE473FA64	:	çƒ™çŸ«æŒ‰çœ‰2 ç§¯å·±
+Destroy obj: 0000004EE473FBA4	:	æŒ‰çœ‰ ob2 å®¶æˆˆ
+Return Obj 0000004EE473FA64		:	çƒ™çŸ«æŒ‰çœ‰2 æž—å®¶
+Destroy obj: 0000004EE473FA64	:	çƒ™çŸ«æŒ‰çœ‰2 å®¶æˆˆ
+Destroy obj: 0000004EE473FA44	:	25é’ æŒ‰çœ‰ obj å®¶æˆˆ
 */

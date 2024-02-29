@@ -11,7 +11,7 @@ public:
 	}
 	SoSimple& AddNum(int n) {
 		num += n;
-		return *this;	// ÂüÁ¶ ÇüÅÂÀÎ °´Ã¼ ÀÚ±âÀÚ½ÅÀ» Àü´Ş
+		return *this;	// ì°¸ì¡° í˜•íƒœì¸ ê°ì²´ ìê¸°ìì‹ ì„ ì „ë‹¬
 	}
 	void ShowData() {
 		cout << "num: " << num << endl;
@@ -19,13 +19,13 @@ public:
 };
 
 SoSimple SimpleFuncObj(SoSimple ob) {
-	cout << "return ÀÌÀü" << endl;
+	cout << "return ì´ì „" << endl;
 	return ob;
 }
 
 int main() {
 	SoSimple obj(7);
-	SimpleFuncObj(obj).AddNum(30).ShowData();	// º¹»çµÈ ÀÓ½Ã °´Ã¼ÀÇ AddNum()ÀÌ »ç¿ëµÈ °Í
+	SimpleFuncObj(obj).AddNum(30).ShowData();	// ë³µì‚¬ëœ ì„ì‹œ ê°ì²´ì˜ AddNum()ì´ ì‚¬ìš©ëœ ê²ƒ
 	obj.ShowData(); 
 
 	return 0;

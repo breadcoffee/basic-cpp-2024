@@ -9,20 +9,20 @@ public:
 	SoSimple(const SoSimple& copy) : num(copy.num) {
 		cout << "Called SoSimple(const SoSimple& copy" << endl;
 	}
-	void ShowData() {	// ¸â¹öÇÔ¼ö - > °´Ã¼¸¦ »ı¼ºÇØ¾ß¸¸ »ç¿ë°¡´É
+	void ShowData() {	// ë©¤ë²„í•¨ìˆ˜ - > ê°ì²´ë¥¼ ìƒì„±í•´ì•¼ë§Œ ì‚¬ìš©ê°€ëŠ¥
 		cout << "num: " << num << endl;
 	}
 };
 
-void SimpleFuncObj(SoSimple ob) {	// SoSimple Å¬·¡½º¸¦ ¸Å°³º¯¼ö·Î ¹Ş¾Æ 
-	ob.ShowData();					// ±× ¾È¿¡ ÀÖ´Â º¹»ç »ı¼ºÀÚ¿Í ¸â¹öÇÔ¼ö¸¦ ½ÇÇàÇÏ°ÔµÊ
+void SimpleFuncObj(SoSimple ob) {	// SoSimple í´ë˜ìŠ¤ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ 
+	ob.ShowData();					// ê·¸ ì•ˆì— ìˆëŠ” ë³µì‚¬ ìƒì„±ìì™€ ë©¤ë²„í•¨ìˆ˜ë¥¼ ì‹¤í–‰í•˜ê²Œë¨
 }
 
 int main() {
 	SoSimple obj(7);
-	cout << "ÇÔ¼ö È£Ãâ Àü" << endl;
+	cout << "í•¨ìˆ˜ í˜¸ì¶œ ì „" << endl;
 	SimpleFuncObj(obj);
-	cout << "ÇÔ¼ö È£Ãâ ÈÄ" << endl;
+	cout << "í•¨ìˆ˜ í˜¸ì¶œ í›„" << endl;
 
 	return 0;
 }

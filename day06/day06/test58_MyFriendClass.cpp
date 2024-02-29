@@ -3,7 +3,7 @@
 #include <cstring>
 using namespace std;
 
-class Girl;		// ±â´ÉÀûÀÎ ÀÇ¹Ì´Â ¾øÀ½, ¼±¾ğÀ» È®ÀÎÇÏ±âÀ§ÇØ ¹Ì¸® ¼±¾ğÇØÁØ °Í
+class Girl;		// ê¸°ëŠ¥ì ì¸ ì˜ë¯¸ëŠ” ì—†ìŒ, ì„ ì–¸ì„ í™•ì¸í•˜ê¸°ìœ„í•´ ë¯¸ë¦¬ ì„ ì–¸í•´ì¤€ ê²ƒ
 
 class Boy {
 private:

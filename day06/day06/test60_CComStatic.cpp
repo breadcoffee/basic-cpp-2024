@@ -3,7 +3,7 @@ using namespace std;
 
 void Counter(){
 	//static int cnt;
-	int cnt = 0;	// cntÀÇ °ªÀº °è¼Ó 1·Î Ãâ·ÂµÈ´Ù.
+	int cnt = 0;	// cntì˜ ê°’ì€ ê³„ì† 1ë¡œ ì¶œë ¥ëœë‹¤.
 	cnt++;
 	cout << "Cutternt cnt: " << cnt << endl;
 }

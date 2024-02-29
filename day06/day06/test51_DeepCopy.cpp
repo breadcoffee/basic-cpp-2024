@@ -15,13 +15,13 @@ public:
 		strcpy(name, myname);
 		age = myage;
 	}
-	Person(const Person& copy) : age(copy.age) { // ±íÀº º¹»ç¸¦ À§ÇÑ º¹»ç »ı¼ºÀÚ
+	Person(const Person& copy) : age(copy.age) { // ê¹Šì€ ë³µì‚¬ë¥¼ ìœ„í•œ ë³µì‚¬ ìƒì„±ì
 		name = new char[strlen(copy.name) + 1];
 		strcpy(name, copy.name);
 	}
 	void ShowPersonInfo() const {
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Person() {
 		delete[] name;
