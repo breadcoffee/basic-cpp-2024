@@ -248,4 +248,46 @@
 			- 선언된 파일 내에서만 참조를 허용하겠다는 의미
 		- 함수 내에 선언된 static의 의미
 			- 한번만 초기화되고 지역변수와 달리 함수를 빠져나가도 소멸되지 않는다.
+
+## 7일차
+- 객체지향 프로그래밍
+	- static 기능(test62 ~ 65)
+		- 선언 시 메모리 공간에 딱 하나만 생성되어 객체들이 공유하는 구조가 된다.
+		- static 변수는 객체 안에 있는 것이 아닌 외부에 존재한다.
+		- 다만 객체에게 멤버변수처럼 접근할 수 있는 권한을 주었다.
 		
+	- mutable(test66)
+		- const 함수 내에서의 값의 변경을 예외적으로 허용한다.
+		
+	```C++
+	class SoSimple {
+	private:
+		int num1;
+		mutable int num2;
+	public:
+		SoSimple(int n1, int n2) : num1(n1), num2(n2) {}
+		void ShowSimpleData() const {
+			cout << num1 << ", " << num2 << endl;
+		}
+		void CopyToNum2() const {
+			num2 = num1;
+		}
+	};
+	```
+	
+	- 상속(test67 ~ 74)
+		- 기존에 정의해 놓은 클래스의 재활용을 목적으로 만들어진 문법적 요소이다.
+		- 접근제한자를 사용하여 상속하여 사용할 수 있는 범위를 제한할 수 있다.
+		- 자신이 상속한 생성자를 호출하는 형태로 클래스의 멤버를 초기화 할 수 있다.
+	
+	```C++
+	class 클래스_이름 : 접근제한자 부모_클래스명{
+	//.. 내용 ..//
+	}
+	///// 실제 코드 /////
+	class UnivStudent : public Person {
+	private:
+		string major;
+	public:
+			/// 내용 ///
+	```
