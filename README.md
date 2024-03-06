@@ -352,6 +352,69 @@
 	// 전역함수에 의한 연산자 오버로딩
 	pos1 + pos2;			// 이항 연산
 	operator++(pos);		// 단항 연산
+	
+	// 전위 연산, 후위 연산
+	++pos -> pos.operator++();
+	pos++ -> pos.operator++(int);
+	
+	--pos -> pos.operator--();
+	pos-- -> pos.operator--(int);
+	// int는 단지 전위인지 후위연산인지 구분하기 위한 목적이지 int형 데이터를 전달하라는 뜻과는 거리가 멀다.
+	```
+	- 교환법칙의 문제해결
+		- (A+B) 와 (B+A)의 결과는 같음
+		- 연산자 오버로딩에서는 다음과 같이 두 경우 다 선언해야함
+	
+	```C++
+	Point operator*(int times){
+		Point pos(xpos*times, ypos*times);
+		return pos;
+	}
+	Point operator*(int times, Point& ref){
+		return ref*times;
+	}
 	```
 	
+## 10일차
+- 연산자 오버로딩2
+	- 이니셜라이저 성능향상(test 101)
+		- 이니셜 라이저 사용 시 선언과 동시에 초기화가 이뤄진다. (복사 생성자만 호출)
+		- 몸체 부분에서 대입연산을 사용하면 선언과 초기화를 각각 호출한다. (생성자와 대입연산자 호출)
 		
+	- 배열의 인덱스 연산자 오버로딩(test 102 ~ 103)
+		- 배열의 연산자 오버로딩 시 예외처리를 해줘야함
+		- 예외처리부분에 소멸자를 호출해야 정상적으로 동작할 수 있음
+	```C++
+	int& operator[] (int idx) {
+		cout << "연산자 함수 호출" << endl;
+		if (idx < 0 || idx >= arrlen) {
+			cout << "Array index out of bound exception" << endl;
+			BoundCheckIntArray::~BoundCheckIntArray();	// 예외처리 부분에 정상적으로 소멸자를 호출
+			exit(1);
+		}
+		return arr[idx];
+	}
+	```
+	- 그 이외에 연산자 오버로딩
+		- new 연산자(test 104)
+			- 메모리 공간의 할당만 오버로딩이 가능하다.
+			- 반환형은 반드시 void형이고, 매개변수형은 size_t이어야한다.
+		
+		- delete 연산자
+			- 오버로딩된 함수에서 메모리 공간의 소멸을 책임져야한다.
+		
+		- 포인터 연산자(test 105)
+			- (->) : 포인터가 가리키는 객체의 맴버에 접근
+			- (*) : 포인터가 가리키는 객체에 접근
+			- (*num)= 30; 은 (num.operator*())=30; 과 같다
+			- num->ShowData(); 는 num.operator->() -> ShowData(); 와 같다.
+			
+		- 스마트 포인터(test 106 ~ 107)
+			- 포인터처럼 동작하는 객체이다.
+			- 객체의 소멸을 위한 delete 연산이 자동으로 이루어짐
+			
+		- Functor
+			- 함수처럼 동작하는 클래스를 펑터(Functor) or 함수 오브젝트(Function Object)라고 한다.
+			- 함수 또는 객체의 동작방식에 유연함을 제공할 때 주로 사용
+			
+			
