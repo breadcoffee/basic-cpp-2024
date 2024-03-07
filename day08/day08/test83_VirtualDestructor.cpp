@@ -29,8 +29,8 @@ public:
 
 int main() {
 	/*
-		��Ӱ��迡 �־ ��ü �����ʹ� �����ؾ��Ѵ�.
-		�θ�Ÿ���� ��ü �����ͷ� �ڽ� ��ü�� ����Ű�� ���(������) �����ؾ��Ѵ�.
+		상속관계에 있어서 객체 포인터는 조심해야한다.
+		부모타입의 객체 포인터로 자식 객체를 가리키는 경우(다형성) 조심해야한다.
 	*/
 	First* ptr = new Second("simple", "complex");
 	delete ptr;

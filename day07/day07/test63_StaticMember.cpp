@@ -7,7 +7,7 @@ private:
 public:
 	SoSimple() {
 		simObjCnt++;
-		cout << simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;
+		cout << simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;
 	}
 };
 int SoSimple::simObjCnt = 0;
@@ -18,11 +18,11 @@ private:
 public:
 	SoComplex() {
 		cmxObjCnt++;
-		cout << cmxObjCnt << "¹øÂ° SoComplex °´Ã¼" << endl;
+		cout << cmxObjCnt << "ë²ˆì§¸ SoComplex ê°ì²´" << endl;
 	}
 	SoComplex(SoComplex& copy) {
 		cmxObjCnt++;
-		cout << cmxObjCnt << "¹øÂ° SoComplex °´Ã¼" << endl;
+		cout << cmxObjCnt << "ë²ˆì§¸ SoComplex ê°ì²´" << endl;
 	}
 };
 int SoComplex::cmxObjCnt = 0;
@@ -33,7 +33,7 @@ int main() {
 
 	SoComplex cmx1;
 	SoComplex cmx2 = cmx1;
-	SoComplex();			// ÀÓ½Ã°´Ã¼ »ý¼º
+	SoComplex();			// ìž„ì‹œê°ì²´ ìƒì„±
 
 	return 0;
 }

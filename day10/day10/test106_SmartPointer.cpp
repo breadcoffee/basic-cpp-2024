@@ -6,10 +6,10 @@ private:
 	int xpos, ypos;
 public:
 	Point(int x = 0, int y = 0) : xpos(x), ypos(y) {
-		cout << "Point °´Ã¼ »ı¼º" << endl;
+		cout << "Point ê°ì²´ ìƒì„±" << endl;
 	}
 	~Point() {
-		cout << "Point °´Ã¼ ¼Ò¸ê" << endl;
+		cout << "Point ê°ì²´ ì†Œë©¸" << endl;
 	}
 	void SetPos(int x, int y) {
 		xpos = x;
@@ -29,10 +29,10 @@ private:
 public:
 	SmartPtr(Point* ptr) : posptr(ptr) {}
 	Point& operator*() const {
-		return *posptr;					// °´Ã¼¸¦ ÂüÁ¶ÇÏ°íÀÖÀ½
+		return *posptr;					// ê°ì²´ë¥¼ ì°¸ì¡°í•˜ê³ ìˆìŒ
 	}
 	Point* operator->() const {
-		return posptr;					// Æ÷ÀÎÅÍ·Î º¯È¯½ÃÅ´
+		return posptr;					// í¬ì¸í„°ë¡œ ë³€í™˜ì‹œí‚´
 	}
 	~SmartPtr() {
 		delete posptr;

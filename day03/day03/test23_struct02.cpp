@@ -17,7 +17,7 @@ public:
 
 int main() {
 
-	human h1 = { "È«±æµ¿", 50, "ÀÇÀû" };
+	human h1 = { "í™ê¸¸ë™", 50, "ì˜ì " };
 	h1.showHuman();
 
 	return 0;

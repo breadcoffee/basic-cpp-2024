@@ -2,9 +2,9 @@
 
 using namespace std;
 
-// namespace´Â ¼­·Î °°Àº ÀÌ¸§ÀÇ ÇÔ¼ö¸¦ Á¤ÀÇÇßÀ»¶§ ±¸ºĞÁş±â À§ÇØ »ç¿ëÇÑ´Ù.
+// namespaceëŠ” ì„œë¡œ ê°™ì€ ì´ë¦„ì˜ í•¨ìˆ˜ë¥¼ ì •ì˜í–ˆì„ë•Œ êµ¬ë¶„ì§“ê¸° ìœ„í•´ ì‚¬ìš©í•œë‹¤.
 
-namespace BestComImpl { // C++ Àº ¼±¾ğ°ú Á¤ÀÇ¸¦ ±¸ºĞÇØ¾ßÇÑ´Ù.
+namespace BestComImpl { // C++ ì€ ì„ ì–¸ê³¼ ì •ì˜ë¥¼ êµ¬ë¶„í•´ì•¼í•œë‹¤.
 	void SimpleFunc();
 }
 namespace BestComImpl {
@@ -16,18 +16,18 @@ namespace ProgComImpl {
 
 int main() {
 	BestComImpl::SimpleFunc(); 
-	// :: ¿¬»êÀÚ´Â ¹üÀ§ÁöÁ¤ ¿¬»êÀÚ(scope resolution operator)ÀÌ¶ó°í ÇÑ´Ù. ÁÙ¿©¼­ ½ºÄÚÇÁ¶ó°í ºÎ¸¥´Ù.
+	// :: ì—°ì‚°ìëŠ” ë²”ìœ„ì§€ì • ì—°ì‚°ì(scope resolution operator)ì´ë¼ê³  í•œë‹¤. ì¤„ì—¬ì„œ ìŠ¤ì½”í”„ë¼ê³  ë¶€ë¥¸ë‹¤.
 	return 0;
 }
 
 void BestComImpl::SimpleFunc() {
-	cout << "BestCom::SimpleFunc°¡ Á¤ÀÇÇÑ ÇÔ¼ö" << endl;
-	PrettyFunc(); // µ¿ÀÏ ÀÌ¸§ °ø°£¿¡ Á¤ÀÇµÈ ÇÔ¼ö¸¦ È£ÃâÇÒ¶§¿¡´Â ÀÌ¸§°ø°£À» ¸í½ÃÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
-	ProgComImpl::SimpleFunc(); // ´Ù¸¥ ÀÌ¸§ °ø°£
+	cout << "BestCom::SimpleFuncê°€ ì •ì˜í•œ í•¨ìˆ˜" << endl;
+	PrettyFunc(); // ë™ì¼ ì´ë¦„ ê³µê°„ì— ì •ì˜ëœ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí• ë•Œì—ëŠ” ì´ë¦„ê³µê°„ì„ ëª…ì‹œí•  í•„ìš”ê°€ ì—†ë‹¤.
+	ProgComImpl::SimpleFunc(); // ë‹¤ë¥¸ ì´ë¦„ ê³µê°„
 }
 void BestComImpl::PrettyFunc() {
-	cout << "BestCom::prettyFunc°¡ Á¤ÀÇÇÑ ÇÔ¼ö" << endl;
+	cout << "BestCom::prettyFuncê°€ ì •ì˜í•œ í•¨ìˆ˜" << endl;
 }
 void ProgComImpl::SimpleFunc() {
-	cout << "ProgComÀÌ Á¤ÀÇÇÑ ÇÔ¼ö" << endl;
+	cout << "ProgComì´ ì •ì˜í•œ í•¨ìˆ˜" << endl;
 }

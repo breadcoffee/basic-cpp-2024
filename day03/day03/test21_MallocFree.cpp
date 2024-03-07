@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string.h>
-#include <cstdlib> // Çì´õ .h ´ë½Å ¾Õ¿¡ c ³Ö¾î¼­ »ç¿ë°¡´É
+#include <cstdlib> // í—¤ë” .h ëŒ€ì‹  ì•ì— c ë„£ì–´ì„œ ì‚¬ìš©ê°€ëŠ¥
 
 //#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 
 char* MakeStrAdr(int len) {
-	//char* str = (char*)malloc(sizeof(char) * len); // C:heap ¿µ¿ª¿¡ ¸Ş¸ğ¸® ÇÒ´ç, 1*20byte Å©±â·Î ¸Ş¸ğ¸®ÇÒ´ç
-	char* str = new char[len]; // new·Î ÇÒ´çµÈ ¸Ş¸ğ¸® °ø°£µµ º¯¼ö·Î °£ÁÖ
+	//char* str = (char*)malloc(sizeof(char) * len); // C:heap ì˜ì—­ì— ë©”ëª¨ë¦¬ í• ë‹¹, 1*20byte í¬ê¸°ë¡œ ë©”ëª¨ë¦¬í• ë‹¹
+	char* str = new char[len]; // newë¡œ í• ë‹¹ëœ ë©”ëª¨ë¦¬ ê³µê°„ë„ ë³€ìˆ˜ë¡œ ê°„ì£¼
 	return str;
 }
 

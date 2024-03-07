@@ -4,7 +4,7 @@
 #define __CAR_H__
 
 /*
-	Çì´õÆÄÀÏ : ¼±¾ğ
+	í—¤ë”íŒŒì¼ : ì„ ì–¸
 */
 namespace CAR_CONST{
 	enum {
@@ -23,9 +23,9 @@ private:
 	int carSpeed;
 public:
 	void InitMembers(const char* ID, int fuel);
-	void ShowCarState();	// »óÅÂÁ¤º¸ Ãâ·Â
-	void Accel();			// ¿¢¼¿, ¼ÓµµÁõ°¡
-	void Break();			// ºê·¹ÀÌÅ©, ¼Óµµ°¨¼Ò
+	void ShowCarState();	// ìƒíƒœì •ë³´ ì¶œë ¥
+	void Accel();			// ì—‘ì…€, ì†ë„ì¦ê°€
+	void Break();			// ë¸Œë ˆì´í¬, ì†ë„ê°ì†Œ
 };
 
 #endif

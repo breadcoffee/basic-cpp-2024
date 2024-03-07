@@ -30,12 +30,12 @@ public:
 		strcpy(pNumber, mypNumber);
 	}
 	void printMyInfo() {
-		cout << "³ªÀÇ ÀÌ¸§Àº " << getname() << " ÀÌ°í ³ªÀÌ´Â " << getage() << "»ìÀÌ¸ç ÀüÈ­¹øÈ£´Â " << pNumber << "ÀÔ´Ï´Ù." << endl;
+		cout << "ë‚˜ì˜ ì´ë¦„ì€ " << getname() << " ì´ê³  ë‚˜ì´ëŠ” " << getage() << "ì‚´ì´ë©° ì „í™”ë²ˆí˜¸ëŠ” " << pNumber << "ìž…ë‹ˆë‹¤." << endl;
 	}
 };
 
 int main() {
-	MyInfo st1 = { "ÀÌÁÖ¿ø", 27, "010-1234-1234" };
+	MyInfo st1 = { "ì´ì£¼ì›", 27, "010-1234-1234" };
 	st1.printMyInfo();
 
 	return 0;

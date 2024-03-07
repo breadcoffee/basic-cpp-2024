@@ -5,17 +5,17 @@ class MyClass {
 	int* ptr;
 public:
 	MyClass(int p) : ptr(new int[100]) {
-		cout << "»ı¼ºÀÚ È£Ãâ" << endl;
+		cout << "ìƒì„±ì í˜¸ì¶œ" << endl;
 	}
 	~MyClass() {
-		cout << "¼Ò¸êÀÚ È£Ãâ" << endl;
+		cout << "ì†Œë©¸ì í˜¸ì¶œ" << endl;
 		delete[] ptr;
 	}
 };
 
 int main() {
-	MyClass* m1 = new MyClass(10);	// ¼Ò¸êÀÚ°¡ È£ÃâÀÌ ¾ÈµÊ
-	unique_ptr<MyClass> m2(new MyClass(20));	// ¼Ò¸êÀÚ±îÁö È£ÃâµÊ(unique_ptr : ÀÌ¹Ì Á¤ÀÇµÈ ½º¸¶Æ® Æ÷ÀÎÅÍ)
+	MyClass* m1 = new MyClass(10);	// ì†Œë©¸ìê°€ í˜¸ì¶œì´ ì•ˆë¨
+	unique_ptr<MyClass> m2(new MyClass(20));	// ì†Œë©¸ìê¹Œì§€ í˜¸ì¶œë¨(unique_ptr : ì´ë¯¸ ì •ì˜ëœ ìŠ¤ë§ˆíŠ¸ í¬ì¸í„°)
 
 	return 0;
 }

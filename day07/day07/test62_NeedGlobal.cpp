@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int simObjCnt = 0;	// Àü¿ªº¯¼ö ¼±¾ğ
-int cmxObjCnt = 0;	// Àü¿ªº¯¼ö´Â Á¢±Ù¿¡ ´ëÇÑ Á¦ÇÑÀÌ ¾ø±â ¶§¹®¿¡ À§Çè
+int simObjCnt = 0;	// ì „ì—­ë³€ìˆ˜ ì„ ì–¸
+int cmxObjCnt = 0;	// ì „ì—­ë³€ìˆ˜ëŠ” ì ‘ê·¼ì— ëŒ€í•œ ì œí•œì´ ì—†ê¸° ë•Œë¬¸ì— ìœ„í—˜
 
 class SoSimple {
 public:
 	SoSimple() {
 		simObjCnt++;
-		cout << simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;
+		cout << simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;
 	}
 };
 
@@ -16,11 +16,11 @@ class SoComplex {
 public:
 	SoComplex() {
 		cmxObjCnt++;
-		cout << cmxObjCnt << "¹øÂ° SoComplex °´Ã¼" << endl;
+		cout << cmxObjCnt << "ë²ˆì§¸ SoComplex ê°ì²´" << endl;
 	}
 	SoComplex(SoComplex& copy) {
 		cmxObjCnt++;
-		cout << cmxObjCnt << "¹øÂ° SoComplex °´Ã¼" << endl;
+		cout << cmxObjCnt << "ë²ˆì§¸ SoComplex ê°ì²´" << endl;
 	}
 };
 
@@ -30,7 +30,7 @@ int main() {
 
 	SoComplex com1;
 	SoComplex com2 = com1;
-	SoComplex();			// ÀÓ½Ã°´Ã¼ »ı¼º
+	SoComplex();			// ì„ì‹œê°ì²´ ìƒì„±
 
 	return 0;
 }

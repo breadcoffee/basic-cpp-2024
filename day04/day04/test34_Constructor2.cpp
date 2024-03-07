@@ -16,7 +16,7 @@ public:
 };
 
 int main() {
-	SimpleClass sc1();	// ÇÔ¼öÀÇ ¿øÇü ¼±¾ğ
+	SimpleClass sc1();	// í•¨ìˆ˜ì˜ ì›í˜• ì„ ì–¸
 	SimpleClass mysc = sc1();
 	mysc.ShowData();
 	return 0;

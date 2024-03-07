@@ -5,17 +5,17 @@ int main() {
 	int arr[5] = { 1, 2, 3, 4, 5 };
 	int* parr = arr;
 
-	printf("arr ÁÖ¼Ò : %p\n", arr);			
-	printf("arr Å©±â : %u\n", sizeof(arr));
+	printf("arr æ—å®¶ : %p\n", arr);			
+	printf("arr å†œæ‰ : %u\n", sizeof(arr));
 
-	printf("arr[0] ÁÖ¼Ò : %p\n", &arr[0]);	// arrÀÇ ÁÖ¼Ò¿Í µ¿ÀÏ
-	printf("arr[1] ÁÖ¼Ò : %p\n", &arr[1]);
-	printf("arr + 1 ÁÖ¼Ò : %p\n", arr + 1);	// arr[1]ÀÇ ÁÖ¼Ò¿Í µ¿ÀÏ
+	printf("arr[0] æ—å®¶ : %p\n", &arr[0]);	// arrç‹¼ æ—å®¶å®¢ æ‚¼è€
+	printf("arr[1] æ—å®¶ : %p\n", &arr[1]);
+	printf("arr + 1 æ—å®¶ : %p\n", arr + 1);	// arr[1]ç‹¼ æ—å®¶å®¢ æ‚¼è€
 
-	printf("parr ÁÖ¼Ò : %p\n", &parr);
-	printf("parr µ¥ÀÌÅÍ : %p\n", parr);		// arrÀÇ ÁÖ¼Ò¿Í µ¿ÀÏ
-	printf("parr + 1 : %p\n", parr + 1);	// arr[1]ÀÇ ÁÖ¼Ò¿Í µ¿ÀÏ
-	printf("parr[] : %d, *pa : %d arr[0] : %d\n", parr[0], *parr, arr[0]);	// ¸ğµç °ªÀÌ °°Àº °ªÀ» °¡¸®Å´
+	printf("parr æ—å®¶ : %p\n", &parr);
+	printf("parr å•æç£ : %p\n", parr);		// arrç‹¼ æ—å®¶å®¢ æ‚¼è€
+	printf("parr + 1 : %p\n", parr + 1);	// arr[1]ç‹¼ æ—å®¶å®¢ æ‚¼è€
+	printf("parr[] : %d, *pa : %d arr[0] : %d\n", parr[0], *parr, arr[0]);	// è‘›ç”µ è”¼æ éç¯® è”¼é˜‘ å•Šåºœç³¯
 
 	return 0;
 }

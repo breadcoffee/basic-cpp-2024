@@ -20,8 +20,8 @@ public:
 		cout << "Copy Obj" << endl;
 	}
 	void PersonInfo() const {
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Person() {
 		delete[] name;
@@ -30,7 +30,7 @@ public:
 };
 
 int main() {
-	Person p("È«±æµ¿", 30);
+	Person p("í™ê¸¸ë™", 30);
 	p.PersonInfo();
 	cout << endl;
 

@@ -3,7 +3,7 @@
 using namespace std;
 
 namespace CAR_CONST {
-	enum {	// ¿­°ÅÇü
+	enum {	// ì—´ê±°í˜•
 		ID_LEN = 20,
 		MAX_SPD = 200,
 		FUEL_STEP = 2,
@@ -17,17 +17,17 @@ struct Car {
 	int fuelGauge;
 	int carSpeed;
 
-	void ShowCarState();	// »óÅÂÁ¤º¸ Ãâ·Â
-	void Accel();			// ¿¢¼¿, ¼ÓµµÁõ°¡
-	void Break();			// ºê·¹ÀÌÅ©, ¼Óµµ°¨¼Ò
+	void ShowCarState();	// ìƒíƒœì •ë³´ ì¶œë ¥
+	void Accel();			// ì—‘ì…€, ì†ë„ì¦ê°€
+	void Break();			// ë¸Œë ˆì´í¬, ì†ë„ê°ì†Œ
 };
-// ±¸Á¶Ã¼ ¾È¿¡ ÀÖ´Â ÇÔ¼öÀÇ Á¤ÀÇ¸¦ ±¸Á¶Ã¼ ¹Û¿¡¼­ Á¤ÀÇÇÑ´Ù.
-// ±¸Á¶Ã¼ ¾È¿¡ Á¤ÀÇÇÏ¸é inlineÇÔ¼ö·Î »ç¿ëµÈ´Ù.
-// ±¸Á¶Ã¼ ¹Û¿¡¼­µµ inlineÇÔ¼öÃ³·³ »ç¿ëÇÏ·Á¸é inlineÇÔ¼ö·Î Á¤ÀÇÇØÁÖ¸é µÈ´Ù.
+// êµ¬ì¡°ì²´ ì•ˆì— ìˆëŠ” í•¨ìˆ˜ì˜ ì •ì˜ë¥¼ êµ¬ì¡°ì²´ ë°–ì—ì„œ ì •ì˜í•œë‹¤.
+// êµ¬ì¡°ì²´ ì•ˆì— ì •ì˜í•˜ë©´ inlineí•¨ìˆ˜ë¡œ ì‚¬ìš©ëœë‹¤.
+// êµ¬ì¡°ì²´ ë°–ì—ì„œë„ inlineí•¨ìˆ˜ì²˜ëŸ¼ ì‚¬ìš©í•˜ë ¤ë©´ inlineí•¨ìˆ˜ë¡œ ì •ì˜í•´ì£¼ë©´ ëœë‹¤.
 void Car::ShowCarState() {
-	cout << "¼ÒÀ¯ÀÚID: " << gamerID << endl;
-	cout << "¿¬·á·®: " << fuelGauge << endl;
-	cout << "ÇöÀç¼Óµµ: " << carSpeed << endl;
+	cout << "ì†Œìœ ìID: " << gamerID << endl;
+	cout << "ì—°ë£ŒëŸ‰: " << fuelGauge << endl;
+	cout << "í˜„ì¬ì†ë„: " << carSpeed << endl;
 }
 
 void Car::Accel() {

@@ -11,16 +11,16 @@ public:
 	}
 	friend Point operator+(const Point& pos1, const Point& pos2);
 };
-Point operator+(const Point& pos1, const Point& pos2) {	// operator+ ¶ó´Â ÀÌ¸§ÀÇ ÇÔ¼ö
+Point operator+(const Point& pos1, const Point& pos2) {	// operator+ ë¼ëŠ” ì´ë¦„ì˜ í•¨ìˆ˜
 
-	Point pos(pos1.xpos + pos2.xpos, pos1.ypos + pos2.ypos);	// °´Ã¼»ı¼º
+	Point pos(pos1.xpos + pos2.xpos, pos1.ypos + pos2.ypos);	// ê°ì²´ìƒì„±
 	return pos;
 }
 
 int main() {
 	Point pos1(3, 4);
 	Point pos2(10, 20);
-	Point pos3 = pos1 + pos2;	// Àü¿ªÇÔ¼ö¿¡ ÀÇÇÑ ¿¬»êÀÚ ¿À¹ö·Îµù
+	Point pos3 = pos1 + pos2;	// ì „ì—­í•¨ìˆ˜ì— ì˜í•œ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©
 
 	pos1.ShowPosition();
 	pos2.ShowPosition();

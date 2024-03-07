@@ -11,9 +11,9 @@ public:
 		cout << '[' << xpos << ", " << ypos << ']' << endl;
 	}
 
-	Point operator*(int times) {	// operator+ ¶ó´Â ÀÌ¸§ÀÇ ÇÔ¼ö
+	Point operator*(int times) {	// operator+ ë¼ëŠ” ì´ë¦„ì˜ í•¨ìˆ˜
 
-		Point pos(xpos * times, ypos * times);	// °´Ã¼»ı¼º
+		Point pos(xpos * times, ypos * times);	// ê°ì²´ìƒì„±
 		return pos;
 	}
 };

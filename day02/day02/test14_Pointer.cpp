@@ -3,18 +3,18 @@
 using namespace std;
 
 int main() {
-	const int num = 10;	// num¸¦ »ó¼öÈ­½ÃÅ²´Ù.
-	//num = 100; // numÀÌ »ó¼öÀÌ¹Ç·Î º¯°æÇÒ ¼ö ¾ø´Ù.
+	const int num = 10;	// numë¥¼ ìƒìˆ˜í™”ì‹œí‚¨ë‹¤.
+	//num = 100; // numì´ ìƒìˆ˜ì´ë¯€ë¡œ ë³€ê²½í•  ìˆ˜ ì—†ë‹¤.
 
 	int num1 = 10;
-	int* pnum1;		// Æ÷ÀÎÅÍ(ÁÖ¼Ò) º¯¼ö pnum1 ¼±¾ğ
-	pnum1 = &num1;	// Æ÷ÀÎÅÍ num1ÀÇ ÁÖ¼Ò¸¦ Æ÷ÀÎÅÍº¯¼ö pnum1¿¡ ÀúÀåÇÑ´Ù. & Àº ÁÖ¼Ò¿¬»êÀÚ
+	int* pnum1;		// í¬ì¸í„°(ì£¼ì†Œ) ë³€ìˆ˜ pnum1 ì„ ì–¸
+	pnum1 = &num1;	// í¬ì¸í„° num1ì˜ ì£¼ì†Œë¥¼ í¬ì¸í„°ë³€ìˆ˜ pnum1ì— ì €ì¥í•œë‹¤. & ì€ ì£¼ì†Œì—°ì‚°ì
 
-	cout << "num1ÀÇ °ª : " << num1 << endl;
-	cout << "num1ÀÇ ÁÖ¼Ò°ª : " << &num1 << endl;	
-	cout << "pnum1¿¡ ÀúÀåµÈ °ª: " << pnum1 << endl;	// num1ÀÇ ÁÖ¼Ò°ª
-	cout << "pnum1ÀÇ ÁÖ¼Ò°ª : " << &pnum1 << endl;	
-	cout << "pnum1ÀÌ °¡¸®Å°´Â °ª : " << *pnum1 << endl;	// pnum¿¡ µé¾îÀÖ´Â ÁÖ¼Ò°ª(num1)ÀÇ °ª, *Àº Æ÷ÀÎÅÍ ¿¬»êÀÚ
+	cout << "num1ì˜ ê°’ : " << num1 << endl;
+	cout << "num1ì˜ ì£¼ì†Œê°’ : " << &num1 << endl;	
+	cout << "pnum1ì— ì €ì¥ëœ ê°’: " << pnum1 << endl;	// num1ì˜ ì£¼ì†Œê°’
+	cout << "pnum1ì˜ ì£¼ì†Œê°’ : " << &pnum1 << endl;	
+	cout << "pnum1ì´ ê°€ë¦¬í‚¤ëŠ” ê°’ : " << *pnum1 << endl;	// pnumì— ë“¤ì–´ìˆëŠ” ì£¼ì†Œê°’(num1)ì˜ ê°’, *ì€ í¬ì¸í„° ì—°ì‚°ì
 
 	return 0;
 }

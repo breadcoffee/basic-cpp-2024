@@ -3,13 +3,13 @@
 using namespace std;
 
 int main() {
-	// ÂüÁ¶ÀÚ´Â º¯¼ö¿¡ ´ëÇØ¼­¸¸ ¼±¾ğÀÌ °¡´ÉÇÏ´Ù
+	// ì°¸ì¡°ìëŠ” ë³€ìˆ˜ì— ëŒ€í•´ì„œë§Œ ì„ ì–¸ì´ ê°€ëŠ¥í•˜ë‹¤
 	
 	//int& ref = 20;	(X)
 	//int& ref;			(X)
 	//int& ref = NULL:	(X)
 
-	// À§¿¡¼­ ¸»ÇÑ º¯¼öÀÇ ¹üÀ§¿¡´Â ¹è¿­µµ Æ÷ÇÔÇÑ´Ù.
+	// ìœ„ì—ì„œ ë§í•œ ë³€ìˆ˜ì˜ ë²”ìœ„ì—ëŠ” ë°°ì—´ë„ í¬í•¨í•œë‹¤.
 
 	int arr[3] = { 1, 3, 5 };
 
@@ -17,13 +17,13 @@ int main() {
 	int& ref2 = arr[1];
 	int& ref3 = arr[2];
 
-	cout << "¹è¿­ ÂüÁ¶ÀÚ" << endl;
+	cout << "ë°°ì—´ ì°¸ì¡°ì" << endl;
 	cout << ref1 << endl;
 	cout << ref2 << endl;
 	cout << ref3 << endl;
 
 	cout << endl;
-	// Æ÷ÀÎÅÍµµ º¯¼öÀÌ±â¶§¹®¿¡ ÂüÁ¶ÀÚÀÇ ¼±¾ğÀÌ´Ù.
+	// í¬ì¸í„°ë„ ë³€ìˆ˜ì´ê¸°ë•Œë¬¸ì— ì°¸ì¡°ìì˜ ì„ ì–¸ì´ë‹¤.
 	int num = 12;
 	int* ptr = &num;
 	int** dptr = &ptr;
@@ -32,7 +32,7 @@ int main() {
 	int* (&pref) = ptr;
 	int** (&dpref) = dptr;
 
-	cout << "Æ÷ÀÎÅÍ ÂüÁ¶ÀÚ" << endl;
+	cout << "í¬ì¸í„° ì°¸ì¡°ì" << endl;
 	cout << ref << endl;
 	cout << *pref << endl;
 	cout << **dpref << endl;

@@ -2,25 +2,25 @@
 using namespace std;
 
 class SoSimple {
-public:						// Á¢±ÙÁ¦ÇÑÀÌ public
-	static int simObjCnt;	// static ¸â¹öº¯¼ö ¼±¾ğ(Å¬·¡½º ¸â¹ö)
+public:						// ì ‘ê·¼ì œí•œì´ public
+	static int simObjCnt;	// static ë©¤ë²„ë³€ìˆ˜ ì„ ì–¸(í´ë˜ìŠ¤ ë©¤ë²„)
 public:
 	SoSimple() {
 		simObjCnt++;
 	}
 };
-int SoSimple::simObjCnt = 0;	// static ¸â¹öº¯¼öÀÇ ÃÊ±âÈ­
+int SoSimple::simObjCnt = 0;	// static ë©¤ë²„ë³€ìˆ˜ì˜ ì´ˆê¸°í™”
 
 int main() {
-	// SoSimple °´Ã¼¸¦ ÇÏ³ªµµ »ı¼ºÇÏÁö ¾ÊÀº »óÅÂÀÎµ¥µµ simObjCnt¿¡ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.
-	// static ¸â¹öº¯¼ö°¡ °´Ã¼ ³»¿¡ Á¸ÀçÇÏÁö ¾Ê´Â´Ù´Â Áõ¸íÀÌ´Ù.
-	cout << SoSimple::simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;	// Å¬·¡½º ÀÌ¸§À¸·Î static ¸â¹ö¿¡ Á¢±Ù°¡´É
+	// SoSimple ê°ì²´ë¥¼ í•˜ë‚˜ë„ ìƒì„±í•˜ì§€ ì•Šì€ ìƒíƒœì¸ë°ë„ simObjCntì— ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤.
+	// static ë©¤ë²„ë³€ìˆ˜ê°€ ê°ì²´ ë‚´ì— ì¡´ì¬í•˜ì§€ ì•ŠëŠ”ë‹¤ëŠ” ì¦ëª…ì´ë‹¤.
+	cout << SoSimple::simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;	// í´ë˜ìŠ¤ ì´ë¦„ìœ¼ë¡œ static ë©¤ë²„ì— ì ‘ê·¼ê°€ëŠ¥
 	SoSimple sim1;
 	SoSimple sim2;
 
-	cout << SoSimple::simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;
-	cout << sim1.simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;
-	cout << sim2.simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;
+	cout << SoSimple::simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;
+	cout << sim1.simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;
+	cout << sim2.simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;
 
 	return 0;
 }

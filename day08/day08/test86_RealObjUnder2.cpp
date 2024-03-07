@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-// Å¬·¡½º Data¸¦ Èä³»³½ ¿µ¿ª
+// í´ë˜ìŠ¤ Dataë¥¼ í‰ë‚´ë‚¸ ì˜ì—­
 typedef struct Data {
 
 	int data;
-	void(*ShowData)(Data*);		// ShowData ¸â¹öÇÔ¼ö ¼±¾ğ
-	void (*Add)(Data*, int);	// Add ¸â¹öÇÔ¼ö ¼±¾ğ
+	void(*ShowData)(Data*);		// ShowData ë©¤ë²„í•¨ìˆ˜ ì„ ì–¸
+	void (*Add)(Data*, int);	// Add ë©¤ë²„í•¨ìˆ˜ ì„ ì–¸
 } Data;
 
-void ShowData(Data* THIS) // ShowData ¸â¹öÇÔ¼ö Á¤ÀÇ
+void ShowData(Data* THIS) // ShowData ë©¤ë²„í•¨ìˆ˜ ì •ì˜
 { cout << " Data: " << THIS->data << endl; }
-void Add(Data* THIS, int num) // Add ¸â¹öÇÔ¼ö Á¤ÀÇ
+void Add(Data* THIS, int num) // Add ë©¤ë²„í•¨ìˆ˜ ì •ì˜
 { THIS->data += num; }
 
-// ÀûÀıÈ÷ º¯°æµÈ main ÇÔ¼ö
+// ì ì ˆíˆ ë³€ê²½ëœ main í•¨ìˆ˜
 int main() {
-	Data obj1 = { 15, ShowData, Add };	// ±¸Á¶Ã¼ Data º¯¼ö ¼±¾ğ°ú ÃÊ±âÈ­
+	Data obj1 = { 15, ShowData, Add };	// êµ¬ì¡°ì²´ Data ë³€ìˆ˜ ì„ ì–¸ê³¼ ì´ˆê¸°í™”
 	Data obj2 = { 17, ShowData, Add };
 
 	obj1.Add(&obj1, 17);

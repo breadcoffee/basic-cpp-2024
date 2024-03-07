@@ -4,13 +4,13 @@ using namespace std;
 
 int main() {
 	const int num = 10;
-	//int& ref = num; »ó¼öÈ­µÈ º¯¼ö¸¦ ÂüÁ¶ ºÒ°¡´ÉÇÏ´Ù.
-	const int& ref = num; // ÀÌ·¸°ÔÇÏ¸é ÂüÁ¶ÀÚ¸¦ ÅëÇØ ¼ö¸¦ º¯°æÇÏ´Â °ÍÀÌ ºÒ°¡´ÉÇÏ±â ¶§¹®¿¡ ¼º¸³
-	// Áï À§¿¡¼­ ¿À·ù°¡ ³ª´Â ÀÌÀ¯´Â ÂüÁ¶°¡ ºÒ°¡´ÉÇÑ °ÍÀÌ ¾Æ´Ñ const¿¡¼­ ¿¡·¯°¡ ³­ °Í
-	// »ó¼öÈ­µÈ º¯¼öµµ º¯¼öÀÌ±â¿¡ ÂüÁ¶ °¡´ÉÇÏ´Ù.
+	//int& ref = num; ìƒìˆ˜í™”ëœ ë³€ìˆ˜ë¥¼ ì°¸ì¡° ë¶ˆê°€ëŠ¥í•˜ë‹¤.
+	const int& ref = num; // ì´ë ‡ê²Œí•˜ë©´ ì°¸ì¡°ìžë¥¼ í†µí•´ ìˆ˜ë¥¼ ë³€ê²½í•˜ëŠ” ê²ƒì´ ë¶ˆê°€ëŠ¥í•˜ê¸° ë•Œë¬¸ì— ì„±ë¦½
+	// ì¦‰ ìœ„ì—ì„œ ì˜¤ë¥˜ê°€ ë‚˜ëŠ” ì´ìœ ëŠ” ì°¸ì¡°ê°€ ë¶ˆê°€ëŠ¥í•œ ê²ƒì´ ì•„ë‹Œ constì—ì„œ ì—ëŸ¬ê°€ ë‚œ ê²ƒ
+	// ìƒìˆ˜í™”ëœ ë³€ìˆ˜ë„ ë³€ìˆ˜ì´ê¸°ì— ì°¸ì¡° ê°€ëŠ¥í•˜ë‹¤.
 
-	//int& ref = 30; // ÂüÁ¶ÀÚ´Â »ó¼ö¸¦ ÂüÁ¶ ºÒ°¡´ÉÇÏ´Ù.
-	const int& ref = 30; // 30ÀÌ ÀÓ½Ãº¯¼ö·Î »ý¼ºµÇ¾î ÂüÁ¶°¡ °¡´ÉÇÏ´Ù.
+	//int& ref = 30; // ì°¸ì¡°ìžëŠ” ìƒìˆ˜ë¥¼ ì°¸ì¡° ë¶ˆê°€ëŠ¥í•˜ë‹¤.
+	const int& ref = 30; // 30ì´ ìž„ì‹œë³€ìˆ˜ë¡œ ìƒì„±ë˜ì–´ ì°¸ì¡°ê°€ ê°€ëŠ¥í•˜ë‹¤.
 
 	return 0;
 }

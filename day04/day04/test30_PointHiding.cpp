@@ -4,7 +4,7 @@ using namespace std;
 
 bool Point::InitMembers(int xpos, int ypos) {
 	if (xpos < 0 || ypos < 0) {
-		cout << "¹þ¾î³­ ¹üÀ§ÀÇ °ª Àü´Þ" << endl;
+		cout << "ë²—ì–´ë‚œ ë²”ìœ„ì˜ ê°’ ì „ë‹¬" << endl;
 		return false;
 	}
 
@@ -13,7 +13,7 @@ bool Point::InitMembers(int xpos, int ypos) {
 	return true;
 }
 
-int Point::GetX() const { // const ÇÔ¼ö,°´Ã¼ ³»ºÎº¯¼ö °ª º¯°æ ºÒ°¡´É, const ÇÔ¼ö·Î¸¸ È£Ãâ°¡´É
+int Point::GetX() const { // const í•¨ìˆ˜,ê°ì²´ ë‚´ë¶€ë³€ìˆ˜ ê°’ ë³€ê²½ ë¶ˆê°€ëŠ¥, const í•¨ìˆ˜ë¡œë§Œ í˜¸ì¶œê°€ëŠ¥
 	return x;
 }
 
@@ -23,7 +23,7 @@ int Point::GetY() const {
 
 bool Point::SetX(int xpos) {
 	if (x > xpos || xpos > 100) {
-		cout << "¹þ¾î³­ ¹üÀ§ÀÇ °ª Àü´Þ" << endl;
+		cout << "ë²—ì–´ë‚œ ë²”ìœ„ì˜ ê°’ ì „ë‹¬" << endl;
 		return false;
 	}
 	x = xpos;
@@ -32,7 +32,7 @@ bool Point::SetX(int xpos) {
 
 bool Point::SetY(int ypos) {
 	if (0 > ypos || ypos > 100) {
-		cout << "¹þ¾î³­ ¹üÀ§ÀÇ °ª Àü´Þ" << endl;
+		cout << "ë²—ì–´ë‚œ ë²”ìœ„ì˜ ê°’ ì „ë‹¬" << endl;
 		return false;
 	}
 	y = ypos;

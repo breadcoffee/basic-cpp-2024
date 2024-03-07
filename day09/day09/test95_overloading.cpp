@@ -3,38 +3,38 @@ using namespace std;
 
 class Myclass {
 private:
-    int num; // MyclassÀÇ ¸â¹ö º¯¼ö·Î Á¤¼öÇü num ¼±¾ğ
+    int num; // Myclassì˜ ë©¤ë²„ ë³€ìˆ˜ë¡œ ì •ìˆ˜í˜• num ì„ ì–¸
 
 public:
-    // »ı¼ºÀÚ: ÀÎÀÚ·Î ¹ŞÀº Á¤¼ö °ªÀ» ¸â¹ö º¯¼ö num¿¡ ÃÊ±âÈ­
+    // ìƒì„±ì: ì¸ìë¡œ ë°›ì€ ì •ìˆ˜ ê°’ì„ ë©¤ë²„ ë³€ìˆ˜ numì— ì´ˆê¸°í™”
     Myclass(int v) : num(v) {}
 
-    // º¹»ç »ı¼ºÀÚ: ´Ù¸¥ Myclass °´Ã¼¸¦ ¹Ş¾Æ¿Í¼­ ±× °´Ã¼ÀÇ num¸¦ º¹»çÇÏ¿© ÃÊ±âÈ­
+    // ë³µì‚¬ ìƒì„±ì: ë‹¤ë¥¸ Myclass ê°ì²´ë¥¼ ë°›ì•„ì™€ì„œ ê·¸ ê°ì²´ì˜ numë¥¼ ë³µì‚¬í•˜ì—¬ ì´ˆê¸°í™”
     Myclass(const Myclass& other) : num(other.num) {}
 
-    // print ÇÔ¼ö: °´Ã¼ÀÇ value¸¦ Ãâ·Â
+    // print í•¨ìˆ˜: ê°ì²´ì˜ valueë¥¼ ì¶œë ¥
     void print() {
         cout << "Value: " << num << endl;
     }
 
-    // µ¡¼À ¿¬»êÀÚ ¿À¹ö·Îµù: µÎ Myclass °´Ã¼ÀÇ num¸¦ ´õÇÑ °á°ú¸¦ °¡Áö´Â »õ·Î¿î Myclass °´Ã¼¸¦ ¹İÈ¯
+    // ë§ì…ˆ ì—°ì‚°ì ì˜¤ë²„ë¡œë”©: ë‘ Myclass ê°ì²´ì˜ numë¥¼ ë”í•œ ê²°ê³¼ë¥¼ ê°€ì§€ëŠ” ìƒˆë¡œìš´ Myclass ê°ì²´ë¥¼ ë°˜í™˜
     Myclass operator+(const Myclass& other) const {
         return Myclass(num + other.num);
     }
 };
 
 int main() {
-    Myclass a(10); // Myclass °´Ã¼ a¸¦ »ı¼ºÇÏ°í num¸¦ 10À¸·Î ÃÊ±âÈ­
-    a.print(); // aÀÇ num Ãâ·Â (Value: 10)
+    Myclass a(10); // Myclass ê°ì²´ aë¥¼ ìƒì„±í•˜ê³  numë¥¼ 10ìœ¼ë¡œ ì´ˆê¸°í™”
+    a.print(); // aì˜ num ì¶œë ¥ (Value: 10)
 
-    Myclass b(a); // Myclass °´Ã¼ b¸¦ »ı¼ºÇÏ°í aÀÇ num·Î ÃÊ±âÈ­
-    b.print(); // bÀÇ num Ãâ·Â (Value: 10)
+    Myclass b(a); // Myclass ê°ì²´ bë¥¼ ìƒì„±í•˜ê³  aì˜ numë¡œ ì´ˆê¸°í™”
+    b.print(); // bì˜ num ì¶œë ¥ (Value: 10)
 
-    Myclass c = b; // Myclass °´Ã¼ c¸¦ »ı¼ºÇÏ°í bÀÇ num·Î ÃÊ±âÈ­
-    c.print(); // cÀÇ num Ãâ·Â (Value: 10)
+    Myclass c = b; // Myclass ê°ì²´ cë¥¼ ìƒì„±í•˜ê³  bì˜ numë¡œ ì´ˆê¸°í™”
+    c.print(); // cì˜ num ì¶œë ¥ (Value: 10)
 
-    Myclass d = a + b + c; // a, b, cÀÇ value¸¦ ´õÇÑ °á°ú·Î Myclass °´Ã¼ d¸¦ »ı¼º
-    d.print(); // dÀÇ num Ãâ·Â (Value: 30)
+    Myclass d = a + b + c; // a, b, cì˜ valueë¥¼ ë”í•œ ê²°ê³¼ë¡œ Myclass ê°ì²´ dë¥¼ ìƒì„±
+    d.print(); // dì˜ num ì¶œë ¥ (Value: 30)
 
     return 0;
 }

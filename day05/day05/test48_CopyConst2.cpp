@@ -18,7 +18,7 @@ int main() {
 	AA obj1(10, 20);
 	obj1.AAInfo();
 	
-	// 哪颇老矾啊 汗荤积己磊甫 磊悼栏肺 父甸绢辑 力傍
+	// 旎错寣鞚茧煬臧� 氤奠偓靸濎劚鞛愲ゼ 鞛愲彊鞙茧 毵岆摛鞏挫劀 鞝滉车
 
 	AA obj2(obj1);
 	obj2.AAInfo();

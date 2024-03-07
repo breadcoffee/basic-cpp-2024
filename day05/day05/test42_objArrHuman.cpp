@@ -8,33 +8,33 @@ private:
 
 public:
 	Human(const char* pname, int aage) {
-		cout << "»ı¼ºÀÚ È£Ãâ" << endl;
-		strcpy(name, pname);	// strcpy() ½Ã ¿øº»ÀÇ µ¥ÀÌÅÍ°¡ º¯È¯µÉ °¡´É¼ºÀÌ ÀÖ¾î¼­ const¸¦ »ç¿ë
+		cout << "ìƒì„±ì í˜¸ì¶œ" << endl;
+		strcpy(name, pname);	// strcpy() ì‹œ ì›ë³¸ì˜ ë°ì´í„°ê°€ ë³€í™˜ë  ê°€ëŠ¥ì„±ì´ ìˆì–´ì„œ constë¥¼ ì‚¬ìš©
 		age = aage;
 	}
 	void HumanInfo(){
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Human(){
-		cout << "¼Ò¸êÀÚ È£Ãâ" << endl;
+		cout << "ì†Œë©¸ì í˜¸ì¶œ" << endl;
 	}
 };
 
 int main() {
-	Human h[3]= { Human("È«±æµ¿", 50), Human("Ã¶¼ö", 48), Human("¿µÈñ", 39) }; // °´Ã¼¹è¿­
+	Human h[3]= { Human("í™ê¸¸ë™", 50), Human("ì² ìˆ˜", 48), Human("ì˜í¬", 39) }; // ê°ì²´ë°°ì—´
 
 	for (int i = 0; i < 3; i++) {
 		h[i].HumanInfo();
 	}
 
-	Human* h1 = new Human("°¡³ª´Ù", 50);	// °´Ã¼Æ÷ÀÎÅÍ·Î ¸â¹ö Á¢±Ù
-	Human h2("¶ó¸¶¹Ù", 23);					// °´Ã¼·Î ¸â¹ö Á¢±Ù
+	Human* h1 = new Human("ê°€ë‚˜ë‹¤", 50);	// ê°ì²´í¬ì¸í„°ë¡œ ë©¤ë²„ ì ‘ê·¼
+	Human h2("ë¼ë§ˆë°”", 23);					// ê°ì²´ë¡œ ë©¤ë²„ ì ‘ê·¼
 	
 	h1->HumanInfo();
 	h2.HumanInfo();
 
-	delete h1;	// Æ÷ÀÎÅÍ´Â ¸Ş¸ğ¸®°¡ ÀÚµ¿À¸·Î ¼Ò¸êµÇÁö ¾ÊÀ½
+	delete h1;	// í¬ì¸í„°ëŠ” ë©”ëª¨ë¦¬ê°€ ìë™ìœ¼ë¡œ ì†Œë©¸ë˜ì§€ ì•ŠìŒ
 
 	return 0;
 }

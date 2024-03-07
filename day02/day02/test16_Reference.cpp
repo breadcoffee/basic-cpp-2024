@@ -3,48 +3,48 @@
 using namespace std;
 
 int main() {
-	int num = 10;	// Áö¿ª º¯¼ö ¼±¾ð
+	int num = 10;	// ì§€ì—­ ë³€ìˆ˜ ì„ ì–¸
 	cout << "num : " << num << endl;
 
-	int* pnum = &num;	// ÁÖ¼Ò·Î numº¯¼ö¿¡ Á¢±Ù
-	int& rnum = num;	// ÂüÁ¶·Î numº¯¼ö¿¡ Á¢±Ù
+	int* pnum = &num;	// ì£¼ì†Œë¡œ numë³€ìˆ˜ì— ì ‘ê·¼
+	int& rnum = num;	// ì°¸ì¡°ë¡œ numë³€ìˆ˜ì— ì ‘ê·¼
 
 	/*
-	int num = 10; // ÀÏ¹ÝÀûÀÎ º¯¼ö¼±¾ð
-	int* ptr = &num1 // Æ÷ÀÎÅÍ
-	int& num2 = num1; // ÂüÁ¶ º¯¼ö¼±¾ð, ´Ù¸¥ °´Ã¼³ª °ª¿¡ ´ëÇÑ º°¸íÀ¸·Î »ý°¢
+	int num = 10; // ì¼ë°˜ì ì¸ ë³€ìˆ˜ì„ ì–¸
+	int* ptr = &num1 // í¬ì¸í„°
+	int& num2 = num1; // ì°¸ì¡° ë³€ìˆ˜ì„ ì–¸, ë‹¤ë¥¸ ê°ì²´ë‚˜ ê°’ì— ëŒ€í•œ ë³„ëª…ìœ¼ë¡œ ìƒê°
 		
-		ÂüÁ¶Çü º¯¼ö´Â ¼±¾ð°ú µ¿½Ã¿¡ ÃÊ±âÈ­µÇ¾î¾ß ÇÏ°í,
-		null·Î ÃÊ±âÈ­ÇÏ°Å³ª ÂüÁ¶¸¦ º¯°æÇÒ ¼ö ¾øÀ¸¹Ç·Î,
-		Æ÷ÀÎÅÍº¸´Ù ¾ÈÀüÇÏ°Ô Ãë±Þ¹Þ´Â´Ù.
+		ì°¸ì¡°í˜• ë³€ìˆ˜ëŠ” ì„ ì–¸ê³¼ ë™ì‹œì— ì´ˆê¸°í™”ë˜ì–´ì•¼ í•˜ê³ ,
+		nullë¡œ ì´ˆê¸°í™”í•˜ê±°ë‚˜ ì°¸ì¡°ë¥¼ ë³€ê²½í•  ìˆ˜ ì—†ìœ¼ë¯€ë¡œ,
+		í¬ì¸í„°ë³´ë‹¤ ì•ˆì „í•˜ê²Œ ì·¨ê¸‰ë°›ëŠ”ë‹¤.
 	*/
 
 	num = 20;
 	cout << endl;
-	cout << "num = 20 À¸·Î º¯°æ" << endl;
+	cout << "num = 20 ìœ¼ë¡œ ë³€ê²½" << endl;
 	cout << "num : " << num << endl;
 	cout << "*pnum : " << *pnum << endl;
 	cout << "rnum : " << rnum << endl;
 
 	*pnum = 30;
 	cout << endl;
-	cout << "*pnum = 30 À¸·Î º¯°æ" << endl;
+	cout << "*pnum = 30 ìœ¼ë¡œ ë³€ê²½" << endl;
 	cout << "num : " << num << endl;
 	cout << "*pnum : " << *pnum << endl;
 	cout << "rnum : " << rnum << endl;
 
 	rnum = 40;
 	cout << endl;
-	cout << "rnum = 40 À¸·Î º¯°æ" << endl;
+	cout << "rnum = 40 ìœ¼ë¡œ ë³€ê²½" << endl;
 	cout << "num : " << num << endl;
 	cout << "*pnum : " << *pnum << endl;
 	cout << "rnum : " << rnum << endl;
 
 	cout << endl;
-	cout << "ÁÖ¼Ò°ª" << endl;
+	cout << "ì£¼ì†Œê°’" << endl;
 	cout << "num : " << &num << endl;
-	cout << "pnum : " << &pnum << endl;		// Æ÷ÀÎÅÍÀÇ ÁÖ¼Ò°ª
-	cout << "*pnum : " << &*pnum << endl;	// Æ÷ÀÎÅÍ°¡ °¡¸£Å°´Â ÁÖ¼Ò°ª
+	cout << "pnum : " << &pnum << endl;		// í¬ì¸í„°ì˜ ì£¼ì†Œê°’
+	cout << "*pnum : " << &*pnum << endl;	// í¬ì¸í„°ê°€ ê°€ë¥´í‚¤ëŠ” ì£¼ì†Œê°’
 	cout << "rnum : " << &rnum << endl;
 
 	return 0;

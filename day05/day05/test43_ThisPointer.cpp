@@ -11,7 +11,7 @@ public:
 		cout << "num= " << num << ", ";
 		cout << "address= " << this << endl;
 	}
-	void ShowSimpleData() {	// ¸â¹öÇÔ¼öµéÀ» ÇÑ¹ø¸¸ »ı¼ºµÇ°í ³ª¸ÓÁö´Â ÀÌ ÇÔ¼ö¸¦ °øÀ¯
+	void ShowSimpleData() {	// ë©¤ë²„í•¨ìˆ˜ë“¤ì„ í•œë²ˆë§Œ ìƒì„±ë˜ê³  ë‚˜ë¨¸ì§€ëŠ” ì´ í•¨ìˆ˜ë¥¼ ê³µìœ 
 		cout << num << endl;
 	}
 	SoSimple* GetThisPointer() {
@@ -21,13 +21,13 @@ public:
 
 int main() {
 	SoSimple sim1(100);
-	SoSimple* ptr1 = sim1.GetThisPointer();	// sim1 °´Ã¼ÀÇ ÁÖ¼Ò°ª ÀúÀå
+	SoSimple* ptr1 = sim1.GetThisPointer();	// sim1 ê°ì²´ì˜ ì£¼ì†Œê°’ ì €ì¥
 
 	cout << ptr1 << ", ";
 	ptr1->ShowSimpleData();
 
 	SoSimple sim2(200);
-	SoSimple* ptr2 = sim2.GetThisPointer();	// sim2 °´Ã¼ÀÇ ÁÖ¼Ò°ª ÀúÀå
+	SoSimple* ptr2 = sim2.GetThisPointer();	// sim2 ê°ì²´ì˜ ì£¼ì†Œê°’ ì €ì¥
 
 	cout << ptr2 << ", ";
 	ptr2->ShowSimpleData();

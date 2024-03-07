@@ -9,9 +9,9 @@ public:
 	void ShowPosition() const {
 		cout << '[' << xpos << ", " << ypos << ']' << endl;
 	}
-	Point operator+(const Point& ref) {	// operator+ ¶ó´Â ÀÌ¸§ÀÇ ÇÔ¼ö
-		// »çÄ¢¿¬»ê¿¡ °üÇÑ ÀÚ·áÇüµéÀÌ Point ¾È¿¡´Â Á¸ÀçÇÏÁö ¾Ê¾Æ »õ·Î ¸¸µé¾î¾ßÇÔ
-		Point pos(xpos + ref.xpos, ypos + ref.ypos);	// °´Ã¼»ý¼º
+	Point operator+(const Point& ref) {	// operator+ ë¼ëŠ” ì´ë¦„ì˜ í•¨ìˆ˜
+		// ì‚¬ì¹™ì—°ì‚°ì— ê´€í•œ ìžë£Œí˜•ë“¤ì´ Point ì•ˆì—ëŠ” ì¡´ìž¬í•˜ì§€ ì•Šì•„ ìƒˆë¡œ ë§Œë“¤ì–´ì•¼í•¨
+		Point pos(xpos + ref.xpos, ypos + ref.ypos);	// ê°ì²´ìƒì„±
 		return pos;
 	}
 };

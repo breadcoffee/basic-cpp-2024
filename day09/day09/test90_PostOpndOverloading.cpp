@@ -9,12 +9,12 @@ public:
 	void ShowPosition() const {
 		cout << '[' << xpos << ", " << ypos << ']' << endl;
 	}
-	Point& operator++() {			// ÀüÀ§Áõ°¡
+	Point& operator++() {			// ì „ìœ„ì¦ê°€
 		xpos += 1;
 		ypos += 1;
 		return *this;
 	}
-	const Point operator++(int) {	// ÈÄÀ§Áõ°¡
+	const Point operator++(int) {	// í›„ìœ„ì¦ê°€
 		const Point retobj(xpos, ypos);
 		xpos += 1;
 		ypos += 1;
@@ -24,13 +24,13 @@ public:
 	friend const Point operator--(Point& ref, int);
 };
 
-Point& operator--(Point& ref) {		// ÀüÀ§ °¨¼Ò
+Point& operator--(Point& ref) {		// ì „ìœ„ ê°ì†Œ
 	ref.xpos -= 1;
 	ref.ypos -= 1;
 	return ref;
 }
 
-const Point operator--(Point& ref, int) {	// ÈÄÀ§ °¨¼Ò
+const Point operator--(Point& ref, int) {	// í›„ìœ„ ê°ì†Œ
 	const Point retobj(ref);
 	ref.xpos -= 1;
 	ref.ypos -= 1;

@@ -7,7 +7,7 @@ private:
 public:
 	AAA() : num(0) {}
 
-	~AAA() {}; // ¼Ò¸êÀÚ : °´Ã¼°¡ ¼Ò¸êÇÒ¶§ È£ÃâµÈ´Ù.
+	~AAA() {}; // ì†Œë©¸ì : ê°ì²´ê°€ ì†Œë©¸í• ë•Œ í˜¸ì¶œëœë‹¤.
 	AAA& CreateInitObj(int n) const {
 		AAA* ptr = new AAA(n);
 		return *ptr;

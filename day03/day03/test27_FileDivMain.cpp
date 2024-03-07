@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 
 	human h;
-	h.InitMembers("È«±æµ¿", 50, "ÀÇÀû");
+	h.InitMembers("í™ê¸¸ë™", 50, "ì˜ì ");
 	h.showHuman();
 
 	return 0;

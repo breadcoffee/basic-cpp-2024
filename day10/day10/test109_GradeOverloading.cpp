@@ -14,22 +14,22 @@ public:
 		return Grade(name ,kr + pos.kr, math + pos.math, eng + pos.eng);
 	}
 	void ShowGradeInfo() const {
-		cout << name << " = [±¹¾î:" << kr << ", ¼öÇĞ : " << math << ", ¿µ¾î : " << eng << ", ÃÑÁ¡ : " << kr + math + eng << ", Æò±Õ : " << (kr + math + eng) / 3 << ']' << endl;
+		cout << name << " = [êµ­ì–´:" << kr << ", ìˆ˜í•™ : " << math << ", ì˜ì–´ : " << eng << ", ì´ì  : " << kr + math + eng << ", í‰ê·  : " << (kr + math + eng) / 3 << ']' << endl;
 	}
 	~Grade() { }
 	friend ostream& operator<<(ostream& os, const Grade& pos);
 };
 
 ostream& operator<<(ostream& os, const Grade& pos) {
-	os << "±¹¾î ÃÑÁ¡: " << pos.kr << ", ¼öÇĞ ÃÑÁ¡: " << pos.math << ", ¿µ¾î ÃÑÁ¡: " << pos.eng << endl;
-	os << "±¹¾î Æò±Õ: " << (pos.kr) / 3 << ", ¼öÇĞ Æò±Õ: " << (pos.math) / 3 << ", ¿µ¾î Æò±Õ: " << (pos.eng) / 3 << endl;
+	os << "êµ­ì–´ ì´ì : " << pos.kr << ", ìˆ˜í•™ ì´ì : " << pos.math << ", ì˜ì–´ ì´ì : " << pos.eng << endl;
+	os << "êµ­ì–´ í‰ê· : " << (pos.kr) / 3 << ", ìˆ˜í•™ í‰ê· : " << (pos.math) / 3 << ", ì˜ì–´ í‰ê· : " << (pos.eng) / 3 << endl;
 	return os;
 }
 
 class Adder {
 public:
 	Grade operator()(const Grade& pos1, const Grade& pos2, const Grade& pos3) {
-		cout << "ÀüÃ¼ ¼ºÀû" << endl;
+		cout << "ì „ì²´ ì„±ì " << endl;
 		return pos1 + pos2 + pos3;
 	}
 };
@@ -38,13 +38,13 @@ int main() {
 	Adder adder;
 	char name[50];
 	int a, b, c;
-	cout << "ÀÌ¸§ ±¹¾î ¼öÇĞ ¿µ¾î¼ºÀûÀ» ¼ø¼­´ë·Î ÀÔ·ÂÇÏ¼¼¿ä : ";
+	cout << "ì´ë¦„ êµ­ì–´ ìˆ˜í•™ ì˜ì–´ì„±ì ì„ ìˆœì„œëŒ€ë¡œ ì…ë ¥í•˜ì„¸ìš” : ";
 	cin >> name >> a >> b >> c;
 	Grade st1(name, a, b, c);
 	st1.ShowGradeInfo();
-	Grade st2("±èÃ¶¼ö", 98, 98, 98);
+	Grade st2("ê¹€ì² ìˆ˜", 98, 98, 98);
 	st2.ShowGradeInfo();
-	Grade st3("ÀÌÁÖ¿ø", 100, 100, 100);
+	Grade st3("ì´ì£¼ì›", 100, 100, 100);
 	st3.ShowGradeInfo();
 	cout << endl;
 

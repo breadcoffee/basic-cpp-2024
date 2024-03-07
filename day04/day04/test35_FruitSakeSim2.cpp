@@ -8,7 +8,7 @@ private:
 	int myMoney;
 
 public:
-	void InitMembers(int price, int num, int money) { // »ı¼ºÀÚ(±â´É: °´Ã¼¸¦ »ı¼ºÇÏ°í ÃÊ±âÈ­ÇÑ´Ù)
+	void InitMembers(int price, int num, int money) { // ìƒì„±ì(ê¸°ëŠ¥: ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì´ˆê¸°í™”í•œë‹¤)
 		APPLE_PRICE = price;
 		numOfApples = num;
 		myMoney = money;
@@ -20,8 +20,8 @@ public:
 		return num;
 	}
 	void ShowSaleResult() const {
-		cout << "³²Àº »ç°ú: " << numOfApples << endl;
-		cout << "ÆÇ¸Å ¼öÀÍ: " << myMoney << endl;
+		cout << "ë‚¨ì€ ì‚¬ê³¼: " << numOfApples << endl;
+		cout << "íŒë§¤ ìˆ˜ìµ: " << myMoney << endl;
 	}
 };
 
@@ -39,8 +39,8 @@ public:
 		myMoney -= money;
 	}
 	void ShowBuyResult() const{
-		cout << "ÇöÀç ÀÜ¾×: " << myMoney << endl;
-		cout << "»ç°ú °³¼ö: " << numOfApples << endl;
+		cout << "í˜„ì¬ ì”ì•¡: " << myMoney << endl;
+		cout << "ì‚¬ê³¼ ê°œìˆ˜: " << numOfApples << endl;
 	}
 };
 
@@ -48,13 +48,13 @@ int main() {
 	FruitSeller seller;
 	seller.InitMembers(1000, 20, 0);
 	// FruitBuyer buyer;
-	// buyer.InitMembers(5000); // ÃÊ±âÈ­ ÇÔ¼ö »ç¿ë
-	FruitBuyer buyer(5000); // »ı¼ºÀÚ »ç¿ë
+	// buyer.InitMembers(5000); // ì´ˆê¸°í™” í•¨ìˆ˜ ì‚¬ìš©
+	FruitBuyer buyer(5000); // ìƒì„±ì ì‚¬ìš©
 	buyer.BuyApples(seller, 2000);
 
-	cout << "°úÀÏ ÆÇ¸ÅÀÚÀÇ ÇöÈ²: " << endl;
+	cout << "ê³¼ì¼ íŒë§¤ìì˜ í˜„í™©: " << endl;
 	seller.ShowSaleResult();
-	cout << "°úÀÏ ±¸¸ÅÀÚÀÇ ÇöÈ²: " << endl;
+	cout << "ê³¼ì¼ êµ¬ë§¤ìì˜ í˜„í™©: " << endl;
 	buyer.ShowBuyResult();
 	return 0;
 }

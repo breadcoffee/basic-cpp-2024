@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-	Car run99;							// class carÅ¸ÀÔÀÇ °´Ã¼»ı¼º
-	run99.InitMembers("run99", 100);	// run99°´Ã¼ÀÇ InitMembers() ¸Ş¼­µå È£Ãâ
+	Car run99;							// class caríƒ€ì…ì˜ ê°ì²´ìƒì„±
+	run99.InitMembers("run99", 100);	// run99ê°ì²´ì˜ InitMembers() ë©”ì„œë“œ í˜¸ì¶œ
 	run99.Accel();
 	run99.Accel();
 	run99.Accel();

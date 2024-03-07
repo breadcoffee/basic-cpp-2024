@@ -20,15 +20,15 @@ ostream& operator<<(ostream& os, const Point& pos) {
 class Adder {
 public:
 	int operator()(const int& n1, const int& n2) {
-		cout << "intÇü Adder" << endl;
+		cout << "intí˜• Adder" << endl;
 		return n1 + n2;
 	}
 	double operator()(const double& e1, const double& e2) {
-		cout << "doubleÇü Adder" << endl;
+		cout << "doubleí˜• Adder" << endl;
 		return e1 + e2;
 	}
 	Point operator()(const Point& pos1, const Point& pos2, const Point& pos3) {
-		cout << "PointÇü Adder" << endl;
+		cout << "Pointí˜• Adder" << endl;
 		return pos1 + pos2 + pos3;
 	}
 };

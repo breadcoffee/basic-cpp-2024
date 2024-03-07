@@ -2,17 +2,17 @@
 
 using namespace std;
 
-int& RefRetFuncOne(int& ref) { // ¹İÈ¯ÇüÀÌ ÂüÁ¶ÇüÀÎ °æ¿ì
+int& RefRetFuncOne(int& ref) { // ë°˜í™˜í˜•ì´ ì°¸ì¡°í˜•ì¸ ê²½ìš°
 	ref++;
 	return ref;
 }
-int RefRetFuncTwo(int& ref) { // ¹İÈ¯ÇüÀÌ »ó¼öÀÎ °æ¿ì
+int RefRetFuncTwo(int& ref) { // ë°˜í™˜í˜•ì´ ìƒìˆ˜ì¸ ê²½ìš°
 	ref++;
 	return ref;
 }
-int& RefRetFuncThree(int ref) { // ¹İÈ¯ÇüÀÌ ÂüÁ¶ÇüÀÎ °æ¿ì
+int& RefRetFuncThree(int ref) { // ë°˜í™˜í˜•ì´ ì°¸ì¡°í˜•ì¸ ê²½ìš°
 	int num = ref;
-	return num;  // ¹İÈ¯°ªÀÌ Áö¿ªº¯¼ö, °ªÀÌ ¾È³Ñ¾î°¨
+	return num;  // ë°˜í™˜ê°’ì´ ì§€ì—­ë³€ìˆ˜, ê°’ì´ ì•ˆë„˜ì–´ê°
 }
 
 int main() {
@@ -22,7 +22,7 @@ int main() {
 	num1 += 1;
 	num2 += 2;
 
-	cout << "num2°¡ ÂüÁ¶ÀÎ °æ¿ì ÇÔ¼ö°¡ ÂüÁ¶ÇüÀÎ °æ¿ì"  << endl;
+	cout << "num2ê°€ ì°¸ì¡°ì¸ ê²½ìš° í•¨ìˆ˜ê°€ ì°¸ì¡°í˜•ì¸ ê²½ìš°"  << endl;
 	cout << "num1: " << num1 << endl;
 	cout << "num2: " << num2 << endl;
 	cout << endl;
@@ -33,26 +33,26 @@ int main() {
 	num3 += 1;
 	num4 += 100;
 
-	cout << "num4°¡ ±âº»ÇüÀÌ°í ÇÔ¼ö°¡ ÂüÁ¶ÇüÀÎ °æ¿ì" << endl;
+	cout << "num4ê°€ ê¸°ë³¸í˜•ì´ê³  í•¨ìˆ˜ê°€ ì°¸ì¡°í˜•ì¸ ê²½ìš°" << endl;
 	cout << "num3: " << num3 << endl;
 	cout << "num4: " << num4 << endl;
 	cout << endl;
 
 	int num5 = 1;
 	int num6 = RefRetFuncTwo(num5);
-	//int& num6 = RefRetFuncTwo(num5); ±âº»ÀÚ·áÇüÀ¸·Î ¼±¾ğµÈ Ref..Two´Â ¹İÈ¯°ªÀÌ »ó¼ö¿©¼­ ÂüÁ¶ÇüÀÌ ºÒ°¡´É
+	//int& num6 = RefRetFuncTwo(num5); ê¸°ë³¸ìë£Œí˜•ìœ¼ë¡œ ì„ ì–¸ëœ Ref..TwoëŠ” ë°˜í™˜ê°’ì´ ìƒìˆ˜ì—¬ì„œ ì°¸ì¡°í˜•ì´ ë¶ˆê°€ëŠ¥
 
 	num5 += 1;
 	num6 += 100;
 
-	cout << "num6°¡ ±âº»ÇüÀÌ°í ÇÔ¼ö°¡ »ó¼öÇüÀÎ °æ¿ì" << endl;
+	cout << "num6ê°€ ê¸°ë³¸í˜•ì´ê³  í•¨ìˆ˜ê°€ ìƒìˆ˜í˜•ì¸ ê²½ìš°" << endl;
 	cout << "num5: " << num5 << endl;
 	cout << "num6: " << num6 << endl;
 	cout << endl;
 
-	int& ref = RefRetFuncThree(10); // ¹İÈ¯°ªÀÌ Áö¿ªº¯¼ö·Î ¾²·¹±â°ªÀÌ µé¾îÀÖÀ½
+	int& ref = RefRetFuncThree(10); // ë°˜í™˜ê°’ì´ ì§€ì—­ë³€ìˆ˜ë¡œ ì“°ë ˆê¸°ê°’ì´ ë“¤ì–´ìˆìŒ
 
-	cout << "ÇÔ¼ö°¡ ÂüÁ¶ÇüÀÌÁö¸¸ ÇÔ¼öÀÇ Áö¿ªº¯¼ö¸¦ ¹ŞÀ½" << endl;
+	cout << "í•¨ìˆ˜ê°€ ì°¸ì¡°í˜•ì´ì§€ë§Œ í•¨ìˆ˜ì˜ ì§€ì—­ë³€ìˆ˜ë¥¼ ë°›ìŒ" << endl;
 	cout << "ref: " << ref << endl;
 	
 	return 0;

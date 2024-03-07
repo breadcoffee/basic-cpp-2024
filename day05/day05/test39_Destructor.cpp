@@ -8,16 +8,16 @@ private:
 	int age;
 public:
 	Person(const char* myname, int myage) {
-		int len = strlen(myname) + 1;  // +1(NULL ¹®ÀÚ) : ³¡¿¡ NULL¹®ÀÚ¸¦ ³Ö¾î ¹®ÀÚ¿­ÀÌ¶ó´Â °ÍÀ» ÀÎ½ÄÇØÁÖ±âÀ§ÇÔ
+		int len = strlen(myname) + 1;  // +1(NULL ë¬¸ì) : ëì— NULLë¬¸ìë¥¼ ë„£ì–´ ë¬¸ìì—´ì´ë¼ëŠ” ê²ƒì„ ì¸ì‹í•´ì£¼ê¸°ìœ„í•¨
 		name = new char[len];
 		strcpy(name, myname);
 		age = myage;
 	}
 	void ShowPersonInfo() const {
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
-	~Person() { // return µÇ±â Àü¿¡ °´Ã¼°¡ ¼Ò¸êÇÑ´Ù.
+	~Person() { // return ë˜ê¸° ì „ì— ê°ì²´ê°€ ì†Œë©¸í•œë‹¤.
 		delete[] name;
 		cout << "called destructor!" << endl;
 	}

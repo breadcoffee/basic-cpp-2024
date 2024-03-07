@@ -8,20 +8,20 @@ private:
 	int arrlen;
 public:
 	BoundCheckIntArray(int len) : arrlen(len) {
-		cout << "»ý¼ºÀÚ È£Ãâ" << endl;
+		cout << "ìƒì„±ìž í˜¸ì¶œ" << endl;
 		arr = new int[len];
 	}
 	int& operator[] (int idx) {
-		cout << "¿¬»êÀÚ ÇÔ¼ö È£Ãâ" << endl;
+		cout << "ì—°ì‚°ìž í•¨ìˆ˜ í˜¸ì¶œ" << endl;
 		if (idx < 0 || idx >= arrlen) {
 			cout << "Array index out of bound exception" << endl;
-			BoundCheckIntArray::~BoundCheckIntArray();	// ¿¹¿ÜÃ³¸® ºÎºÐ¿¡ Á¤»óÀûÀ¸·Î ¼Ò¸êÀÚ¸¦ È£Ãâ
+			BoundCheckIntArray::~BoundCheckIntArray();	// ì˜ˆì™¸ì²˜ë¦¬ ë¶€ë¶„ì— ì •ìƒì ìœ¼ë¡œ ì†Œë©¸ìžë¥¼ í˜¸ì¶œ
 			exit(1);
 		}
 		return arr[idx];
 	}
 	~BoundCheckIntArray() {
-		cout << "¼Ò¸êÀÚ È£Ãâ" << endl;
+		cout << "ì†Œë©¸ìž í˜¸ì¶œ" << endl;
 		delete[] arr;
 	}
 };
@@ -30,7 +30,7 @@ int main() {
 	BoundCheckIntArray arr(5);
 	for (int i = 0; i < 5; i++)
 		arr[i] = (i + 1) * 11;
-	for (int i = 0; i < 6; i++)	// ¹è¿­ÀÇ Å©±â¸¦ ³Ñ¾î ¿¹¿Ü°¡ È£ÃâµÇ¸é ¼Ò¸êÀÚ°¡ È£ÃâÀÌ µÇÁö ¾ÊÀ½
+	for (int i = 0; i < 6; i++)	// ë°°ì—´ì˜ í¬ê¸°ë¥¼ ë„˜ì–´ ì˜ˆì™¸ê°€ í˜¸ì¶œë˜ë©´ ì†Œë©¸ìžê°€ í˜¸ì¶œì´ ë˜ì§€ ì•ŠìŒ
 		cout << arr[i] << endl;
 
 	return 0;

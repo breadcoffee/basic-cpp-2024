@@ -3,17 +3,17 @@ using namespace std;
 
 class SinivelCap {
 public:
-	void Take() const { cout << "Äà¹°ÀÌ ½Ï~ ³³´Ï´Ù." << endl; }
+	void Take() const { cout << "ì½§ë¬¼ì´ ì‹¹~ ë‚©ë‹ˆë‹¤." << endl; }
 };
 
 class SneezeCap {
 public:
-	void Take() const { cout << "ÀçÃ¤±â°¡ ¸Ü½À´Ï´Ù." << endl; }
+	void Take() const { cout << "ìž¬ì±„ê¸°ê°€ ë©ŽìŠµë‹ˆë‹¤." << endl; }
 };
 
 class SnuffleCap {
 public:
-	void Take() const { cout << "ÄÚ°¡ »½ ¶Õ¸³´Ï´Ù." << endl; }
+	void Take() const { cout << "ì½”ê°€ ë»¥ ëš«ë¦½ë‹ˆë‹¤." << endl; }
 };
 
 //class ColdPatient {

@@ -413,8 +413,37 @@
 			- 포인터처럼 동작하는 객체이다.
 			- 객체의 소멸을 위한 delete 연산이 자동으로 이루어짐
 			
-		- Functor
+		- Functor(test 108)
 			- 함수처럼 동작하는 클래스를 펑터(Functor) or 함수 오브젝트(Function Object)라고 한다.
 			- 함수 또는 객체의 동작방식에 유연함을 제공할 때 주로 사용
 			
-			
+## 11일차
+- 연산자 오버로딩2
+	- 임시객체로의 자동 형 변환과 형 변환 연산자(test 110 ~ 111)
+	
+	```C++
+	Number num;		// 대입연산 실행과정
+	num = 30;		// 1. num=Number(30) 임시객체 생성 
+					// 2. num.operator=(Number(30)) 임시객체를 대상으로 하는 대입 연산자의 호출
+				
+	operator int() {		// 형 변환 연산자의 오버로딩
+		return num;
+	}
+	```
+	
+- String 클래스의 디자인
+	- 표준 String(test 112 ~ 114)
+		- 문자열의 처리를 목적으로 정의된 클래스
+		- 헤더파일 <string> 를 포함해야한다.
+	
+- 템플릿(Template)1(test 115 ~ 118)
+	- 함수 템플릿은 함수를 만드는 도구가 된다.
+	- 함수의 기능은 결정되어있지만 자료형은 결정되어있지 않을때 사용한다.
+	
+	```C++
+	template <typename T>
+	T Add(T num1, T num2){
+		return num1 + num2;
+	}
+	```
+

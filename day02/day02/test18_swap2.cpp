@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void swap(int& a, int& b) {	// ÂüÁ¶ º¯¼ö¸¦ ¸Å°³ º¯¼ö·Î »ç¿ë
+void swap(int& a, int& b) {	// ì°¸ì¡° ë³€ìˆ˜ë¥¼ ë§¤ê°œ ë³€ìˆ˜ë¡œ ì‚¬ìš©
 	int temp = 0;
 	temp = a;
 	a = b;
@@ -13,13 +13,13 @@ int main() {
 	int a = 10;
 	int b = 20;
 
-	cout << "¹Ù²Ù±â Àü" << endl;
+	cout << "ë°”ê¾¸ê¸° ì „" << endl;
 	cout << "a: " << a << endl;
 	cout << "b: " << b << endl;
 
-	swap(a, b);	// º¯¼öÀÇ ÁÖ¼Ò¸¦ Àü´Þ
+	swap(a, b);	// ë³€ìˆ˜ì˜ ì£¼ì†Œë¥¼ ì „ë‹¬
 
-	cout << "¹Ù²ï ÈÄ" << endl;
+	cout << "ë°”ë€ í›„" << endl;
 	cout << "a: " << a << endl;
 	cout << "b: " << b << endl;
 

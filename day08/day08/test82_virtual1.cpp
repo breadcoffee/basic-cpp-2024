@@ -20,9 +20,9 @@ public:
 };
 
 int main() {
-	Base b;						// Base Å¸ÀÔÀÇ °´Ã¼º¯¼ö
+	Base b;						// Base íƒ€ìž…ì˜ ê°ì²´ë³€ìˆ˜
 	Derived d;
-	Base* pb = new Derived();	// Base Å¸ÀÔÀÇ °´Ã¼ Æ÷ÀÎÅÍ
+	Base* pb = new Derived();	// Base íƒ€ìž…ì˜ ê°ì²´ í¬ì¸í„°
 
 	pb->func1();
 	pb->func2();

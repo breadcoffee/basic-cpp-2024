@@ -4,15 +4,15 @@
 using namespace std;
 
 void Car::InitMembers(const char* ID, int fuel) {
-	strcpy(gamerID, ID); //Àü´ŞµÈ IDÀÇ ¹®ÀÚ¿­À» gamerID¿¡ ÀúÀå
+	strcpy(gamerID, ID); //ì „ë‹¬ëœ IDì˜ ë¬¸ìì—´ì„ gamerIDì— ì €ì¥
 	fuelGauge = fuel;
 	carSpeed = 0;
 }
 
 void Car::ShowCarState() {
-	cout << "¼ÒÀ¯ÀÚID: " << gamerID << endl;
-	cout << "¿¬·á·®: " << fuelGauge << "%" << endl;
-	cout << "ÇöÀç¼Óµµ: " << carSpeed << "km/s" << endl << endl;
+	cout << "ì†Œìœ ìID: " << gamerID << endl;
+	cout << "ì—°ë£ŒëŸ‰: " << fuelGauge << "%" << endl;
+	cout << "í˜„ì¬ì†ë„: " << carSpeed << "km/s" << endl << endl;
 }
 
 void Car::Accel() {

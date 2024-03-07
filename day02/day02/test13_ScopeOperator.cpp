@@ -2,7 +2,7 @@
 
 using namespace std;
 
-namespace AAA { // namespace ¾È¿¡ namespace¸¦ ¼±¾ğÇÒ ¼ö ÀÖÀ½
+namespace AAA { // namespace ì•ˆì— namespaceë¥¼ ì„ ì–¸í•  ìˆ˜ ìˆìŒ
 	namespace BBB {
 		namespace CCC {
 			int num1;
@@ -11,13 +11,13 @@ namespace AAA { // namespace ¾È¿¡ namespace¸¦ ¼±¾ğÇÒ ¼ö ÀÖÀ½
 	}
 }
 
-int val = 100; // Àü¿ªº¯¼ö
-int gloval = 200; // Àü¿ªº¯¼ö
+int val = 100; // ì „ì—­ë³€ìˆ˜
+int gloval = 200; // ì „ì—­ë³€ìˆ˜
 
 int SimpleFunc() {
-	int val = 20; // Áö¿ªº¯¼ö
-	val += 3; // Áö¿ªº¯¼ö valÀÇ °ª 3 Áõ°¡
-	::val += 7; // Àü¿ªº¯¼ö valÀÇ °ª 7 Áõ°¡
+	int val = 20; // ì§€ì—­ë³€ìˆ˜
+	val += 3; // ì§€ì—­ë³€ìˆ˜ valì˜ ê°’ 3 ì¦ê°€
+	::val += 7; // ì „ì—­ë³€ìˆ˜ valì˜ ê°’ 7 ì¦ê°€
 
 	return val;
 }
@@ -26,16 +26,16 @@ int main() {
 	AAA::BBB::CCC::num1 = 20;
 	AAA::BBB::CCC::num2 = 30;
 
-	namespace ABC = AAA::BBB::CCC; // AAA::BBB::CCCÀÇ º°ÄªÀ» ABC·Î ºÙ¿©ÁÙ ¼ö ÀÖ´Ù.
-	cout << "ABC num1ÀÇ °ª " << ABC::num1 << endl;
-	cout << "ABC num2ÀÇ °ª " << ABC::num2 << endl;
+	namespace ABC = AAA::BBB::CCC; // AAA::BBB::CCCì˜ ë³„ì¹­ì„ ABCë¡œ ë¶™ì—¬ì¤„ ìˆ˜ ìˆë‹¤.
+	cout << "ABC num1ì˜ ê°’ " << ABC::num1 << endl;
+	cout << "ABC num2ì˜ ê°’ " << ABC::num2 << endl;
 	cout << endl;
 
 	int gloval = 30;
 
-	cout << "Àü¿ªº¯¼öÀÇ val °ª " << val << endl;
-	cout << "SimpleFunc Áö¿ªº¯¼öÀÇ val °ª " << SimpleFunc() << endl;
-	cout << "gloval °ª " << gloval << endl; // Áö¿ªº¯¼ö¿Í Àü¿ªº¯¼öÀÇ ÀÌ¸§ÀÌ µ¿ÀÏÇÒ ½Ã Áö¿ªº¯¼ö°¡ ¿ì¼±µÊ
+	cout << "ì „ì—­ë³€ìˆ˜ì˜ val ê°’ " << val << endl;
+	cout << "SimpleFunc ì§€ì—­ë³€ìˆ˜ì˜ val ê°’ " << SimpleFunc() << endl;
+	cout << "gloval ê°’ " << gloval << endl; // ì§€ì—­ë³€ìˆ˜ì™€ ì „ì—­ë³€ìˆ˜ì˜ ì´ë¦„ì´ ë™ì¼í•  ì‹œ ì§€ì—­ë³€ìˆ˜ê°€ ìš°ì„ ë¨
 
 
 	return 0;

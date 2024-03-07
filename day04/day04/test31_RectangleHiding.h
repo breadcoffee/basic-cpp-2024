@@ -3,7 +3,7 @@
 #include "test30_PointHiding.h"
 
 class Rectangle {
-private: // private·Î ¼±¾ğµÈ ÇÊµå¿¡ Á¢±ÙÇÏ±â À§ÇØ¼± getter¿Í setter°¡ ÇÊ¿äÇÏ´Ù.
+private: // privateë¡œ ì„ ì–¸ëœ í•„ë“œì— ì ‘ê·¼í•˜ê¸° ìœ„í•´ì„  getterì™€ setterê°€ í•„ìš”í•˜ë‹¤.
 	Point upLeft;
 	Point lowRight;
 

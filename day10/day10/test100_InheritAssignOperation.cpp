@@ -30,7 +30,7 @@ public:
 	
 	Second& operator=(const Second& ref) {
 		cout << "Second& operator = ()" << endl;
-		//First::operator=(ref);	// ±âÃÊ Å¬·¡½º¿¡ ¾ø´Â ´ëÀÔ ¿¬»êÀÚ È£Ãâ > µğÆúÆ® ¿¬»êÀÚ°¡ È£ÃâµÊ
+		//First::operator=(ref);	// ê¸°ì´ˆ í´ë˜ìŠ¤ì— ì—†ëŠ” ëŒ€ì… ì—°ì‚°ì í˜¸ì¶œ > ë””í´íŠ¸ ì—°ì‚°ìê°€ í˜¸ì¶œë¨
 		num3 = ref.num3;
 		num4 = ref.num4;
 		return *this;

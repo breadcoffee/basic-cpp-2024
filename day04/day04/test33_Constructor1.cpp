@@ -6,15 +6,15 @@ private:
 	int num1;
 	int num2;
 public:
-	SimpleClass() {	// µğÆúÆ® »ı¼ºÀÚ
+	SimpleClass() {	// ë””í´íŠ¸ ìƒì„±ì
 		num1 = 0;
 		num2 = 0;
 	}
-	SimpleClass(int n) { // ÀÔ·ÂÀ» ÇÑ°³ °¡Áö´Â »ı¼ºÀÚ
+	SimpleClass(int n) { // ì…ë ¥ì„ í•œê°œ ê°€ì§€ëŠ” ìƒì„±ì
 		num1 = n;
 		num2 = 0;
 	}
-	SimpleClass(int n1, int n2) { // ÀÔ·ÂÀ» µÎ°³¸¦ °¡Áö´Â »ı¼ºÀÚ
+	SimpleClass(int n1, int n2) { // ì…ë ¥ì„ ë‘ê°œë¥¼ ê°€ì§€ëŠ” ìƒì„±ì
 		num1 = n1;
 		num2 = n2;
 	}

@@ -6,12 +6,12 @@ private:
 	int xpos, ypos;
 public:
 	Point(int x=0, int y=0) : xpos(x), ypos(y) {
-		cout << "»ý¼ºÀÚ È£Ãâ" << endl;
+		cout << "ìƒì„±ìž í˜¸ì¶œ" << endl;
 	}
 	friend ostream& operator << (ostream& os, const Point& pos);
 
 	void* operator new (size_t size) {
-		cout << "operator new : " << size << endl;	// ½Ã½ºÅÛÀÌ ¾Ë¾Æ¼­ »çÀÌÁî¸¦ ÇÒ´ç
+		cout << "operator new : " << size << endl;	// ì‹œìŠ¤í…œì´ ì•Œì•„ì„œ ì‚¬ì´ì¦ˆë¥¼ í• ë‹¹
 		void* adr = new char[size];
 		return adr;
 	}

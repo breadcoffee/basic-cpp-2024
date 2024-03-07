@@ -4,15 +4,15 @@ using namespace std;
 
 int main() {
 	cout << "int size: " << sizeof(int) << endl;
-	int* pi = new int;	// new¿¬»êÀÚ¸¦ ÅëÇØ heap¿µ¿ª¿¡ int(4byte)Å©±â¸¸Å­ ÇÒ´ç
-						// ÇÒ´ç¹ÞÀº Å©±â¸¸Å­ ÁÖ¼Ò¸¦ ¸®ÅÏ½ÃÄÑÁÜ
+	int* pi = new int;	// newì—°ì‚°ìžë¥¼ í†µí•´ heapì˜ì—­ì— int(4byte)í¬ê¸°ë§Œí¼ í• ë‹¹
+						// í• ë‹¹ë°›ì€ í¬ê¸°ë§Œí¼ ì£¼ì†Œë¥¼ ë¦¬í„´ì‹œì¼œì¤Œ
 	*pi = 10;
-	cout << "pi°¡ °¡¸®Å°´Â °÷¿¡ ÀúÀåµÈ °ª: " << *pi << endl;
+	cout << "piê°€ ê°€ë¦¬í‚¤ëŠ” ê³³ì— ì €ìž¥ëœ ê°’: " << *pi << endl;
 
-	delete pi;			// µ¿ÀûÇÒ´ç¹ÞÀº ¸Þ¸ð¸® °ø°£À» ¹ÝÈ¯ÇÑ´Ù.
+	delete pi;			// ë™ì í• ë‹¹ë°›ì€ ë©”ëª¨ë¦¬ ê³µê°„ì„ ë°˜í™˜í•œë‹¤.
 
-	int* pary = new int[10];	// ¸Þ¸ð¸®ÇÒ´çÀ» ¹è¿­ÀÇ ÇüÅÂ·Î ÇÒ´ç¹ÞÀ½
-	for (int i = 0; i < sizeof(pary); i++) {	// sizeof(pary): Æ÷ÀÎÅÍ º¯¼ö ÀÚÃ¼ÀÇ Å©±â´Â 8byte
+	int* pary = new int[10];	// ë©”ëª¨ë¦¬í• ë‹¹ì„ ë°°ì—´ì˜ í˜•íƒœë¡œ í• ë‹¹ë°›ìŒ
+	for (int i = 0; i < sizeof(pary); i++) {	// sizeof(pary): í¬ì¸í„° ë³€ìˆ˜ ìžì²´ì˜ í¬ê¸°ëŠ” 8byte
 		pary[i] = i + 10;
 		printf("pary[%d] = %d\n", i, pary[i]);
 	}

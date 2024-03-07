@@ -70,16 +70,16 @@ public:
 
 class EmployeeHandler {
 private:
-	Employee* empList[50];		// °´Ã¼Æ÷ÀÎÅÍ ¹è¿­
+	Employee* empList[50];		// ê°ì²´í¬ì¸í„° ë°°ì—´
 	int empNum;
 public:
 	EmployeeHandler() : empNum(0) {}
-	void AddEmployee(Employee* emp) {	// Á¤±ÔÁ÷ °´Ã¼ÀÇ Æ÷ÀÎÅÍ¸¦ ¹Ş¾Æ¼­ empList ¹è¿­¿¡ Áı¾î³Ö´Â´Ù.
+	void AddEmployee(Employee* emp) {	// ì •ê·œì§ ê°ì²´ì˜ í¬ì¸í„°ë¥¼ ë°›ì•„ì„œ empList ë°°ì—´ì— ì§‘ì–´ë„£ëŠ”ë‹¤.
 		empList[empNum++] = emp;
 	}
 	void ShowAllSalaryInfo() const {
 		for (int i = 0; i < empNum; i++)
-			empList[i]->ShowSalaryInfo();	// empList¹è¿­ÀÇ ¿ä¼Ò°ª(°´Ã¼ÁÖ¼Ò)À» ÅëÇØ¼­ ¸â¹öÇÔ¼ö¿¡ Á¢±Ù
+			empList[i]->ShowSalaryInfo();	// empListë°°ì—´ì˜ ìš”ì†Œê°’(ê°ì²´ì£¼ì†Œ)ì„ í†µí•´ì„œ ë©¤ë²„í•¨ìˆ˜ì— ì ‘ê·¼
 	}
 	void ShowTotalSalary() const {
 		int sum = 0;
@@ -95,27 +95,27 @@ public:
 };
 
 int main() {
-	// Á÷¿ø °ü¸®¸¦ ¸ñÀûÀ¸·Î ¼³°èµÈ ÄÁÆ®·Ñ Å¬·¡½ºÀÇ °´Ã¼»ı¼º
+	// ì§ì› ê´€ë¦¬ë¥¼ ëª©ì ìœ¼ë¡œ ì„¤ê³„ëœ ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ì˜ ê°ì²´ìƒì„±
 	EmployeeHandler handler;
 
-	// Á¤±ÔÁ÷ µî·Ï
+	// ì •ê·œì§ ë“±ë¡
 	handler.AddEmployee(new PermanentWorker("KIM", 1000));
 	handler.AddEmployee(new PermanentWorker("LEE", 1500));
 
-	// ÀÓ½ÃÁ÷ µî·Ï
+	// ì„ì‹œì§ ë“±ë¡
 	TemporaryWorker* alba = new TemporaryWorker("Jung", 700);
 	alba->AddWorkTime(5);
 	handler.AddEmployee(alba);
 
-	// ¿µ¾÷Á÷ µî·Ï
+	// ì˜ì—…ì§ ë“±ë¡
 	SalesWorker* seller = new SalesWorker("Hong", 1000, 0.1);
 	seller->AddSalesResult(7000);
 	handler.AddEmployee(seller);
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±Ş¿©ÀÇ Á¤º¸
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì •ë³´
 	handler.ShowAllSalaryInfo();
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±Ş¿©ÀÇ ÃÑÇÕ
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì´í•©
 	handler.ShowTotalSalary();
 
 	return 0;

@@ -23,8 +23,8 @@ public:
 		age = myage;
 	}
 	void ShowPersonInfo() const {
-		cout << "ÀÌ¸§: " << name << ", ";
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << ", ";
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Person() {
 		delete[] name;
@@ -33,17 +33,17 @@ public:
 };
 
 int main() {
-	Person* parr[3];		// °´Ã¼Æ÷ÀÎÅÍ¹è¿­
-	//Person parr[3];		// °´Ã¼¹è¿­
-	char namestr[100];	// ¹®ÀÚ¹è¿­
-	//char* strptr;		// charÅ¸ÀÔÀÇ Æ÷ÀÎÅÍº¯¼ö
+	Person* parr[3];		// ê°ì²´í¬ì¸í„°ë°°ì—´
+	//Person parr[3];		// ê°ì²´ë°°ì—´
+	char namestr[100];	// ë¬¸ìžë°°ì—´
+	//char* strptr;		// charíƒ€ìž…ì˜ í¬ì¸í„°ë³€ìˆ˜
 	int age;
 	//int len;
 
 	for (int i = 0; i < 3; i++) {
-		cout << "ÀÌ¸§: ";
+		cout << "ì´ë¦„: ";
 		cin >> namestr;
-		cout << "³ªÀÌ: ";
+		cout << "ë‚˜ì´: ";
 		cin >> age;
 		//len = (strlen(namestr) + 1);
 		//strptr = new char[len];
@@ -54,7 +54,7 @@ int main() {
 	/*parr[0].ShowPersonInfo();
 	parr[1].ShowPersonInfo();
 	parr[2].ShowPersonInfo();*/
-	parr[0]->ShowPersonInfo();		// Æ÷ÀÎÅÍ·Î ¸â¹öÇÔ¼ö¿¡ Á¢±ÙÇÒ ¶§ Arrow ¿¬»êÀÚ¸¦ »ç¿ë(->)
+	parr[0]->ShowPersonInfo();		// í¬ì¸í„°ë¡œ ë©¤ë²„í•¨ìˆ˜ì— ì ‘ê·¼í•  ë•Œ Arrow ì—°ì‚°ìžë¥¼ ì‚¬ìš©(->)
 	parr[1]->ShowPersonInfo();
 	parr[2]->ShowPersonInfo();
 

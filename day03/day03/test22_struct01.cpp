@@ -2,42 +2,42 @@
 
 using namespace std;
 /*
-	C Å¸ÀÔÀÇ ±¸Á¶Ã¼ : ¸â¹ö·Î ¸â¹ö º¯¼ö¸¸ °¡Áø´Ù.
+	C íƒ€ì…ì˜ êµ¬ì¡°ì²´ : ë©¤ë²„ë¡œ ë©¤ë²„ ë³€ìˆ˜ë§Œ ê°€ì§„ë‹¤.
 */
 
-typedef struct human1{ // human ±¸Á¶Ã¼(»ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü)
-	char name1[20]; // ¼Ó¼º; ¸â¹öº¯¼ö(name, age, job)
+typedef struct human1{ // human êµ¬ì¡°ì²´(ì‚¬ìš©ì ì •ì˜ ìë£Œí˜•)
+	char name1[20]; // ì†ì„±; ë©¤ë²„ë³€ìˆ˜(name, age, job)
 	int age1;
 	char job1[20];
-}Human1;		// ¾ÕÀ¸·Î human ±¸Á¶Ã¼¸¦ HumanÀ¸·Î »ç¿ëÇÏ°Ú´Ù
+}Human1;		// ì•ìœ¼ë¡œ human êµ¬ì¡°ì²´ë¥¼ Humanìœ¼ë¡œ ì‚¬ìš©í•˜ê² ë‹¤
 
 void showHuman1(Human1 h) {
 	printf("name: %s age: %d job: %s\n", h.name1, h.age1, h.job1);
 }
 
 /*
-	C++ Å¸ÀÔÀÇ ±¸Á¶Ã¼ : ±¸Á¶Ã¼ ¸â¹ö·Î ¸â¹ö º¯¼ö¿Í ¸â¹ö ÇÔ¼ö¸¦ °¡Áø´Ù.
+	C++ íƒ€ì…ì˜ êµ¬ì¡°ì²´ : êµ¬ì¡°ì²´ ë©¤ë²„ë¡œ ë©¤ë²„ ë³€ìˆ˜ì™€ ë©¤ë²„ í•¨ìˆ˜ë¥¼ ê°€ì§„ë‹¤.
 */
 
-typedef struct human2 { // human ±¸Á¶Ã¼(»ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü)
-	char name2[20]; // ¼Ó¼º; ¸â¹öº¯¼ö(name, age, job)
+typedef struct human2 { // human êµ¬ì¡°ì²´(ì‚¬ìš©ì ì •ì˜ ìë£Œí˜•)
+	char name2[20]; // ì†ì„±; ë©¤ë²„ë³€ìˆ˜(name, age, job)
 	int age2;
 	char job2[20];
 
 	void showHuman2() {
 		printf("name: %s age: %d job: %s\n", name2, age2, job2);
 	}
-}Human2;		// ¾ÕÀ¸·Î human ±¸Á¶Ã¼¸¦ HumanÀ¸·Î »ç¿ëÇÏ°Ú´Ù
+}Human2;		// ì•ìœ¼ë¡œ human êµ¬ì¡°ì²´ë¥¼ Humanìœ¼ë¡œ ì‚¬ìš©í•˜ê² ë‹¤
 
 
 int main() {
-	// C ±¸Á¶Ã¼
-	human1 h1 = { "È«±æµ¿", 50, "ÀÇÀû" };
+	// C êµ¬ì¡°ì²´
+	human1 h1 = { "í™ê¸¸ë™", 50, "ì˜ì " };
 	showHuman1(h1);
 
-	// C++ ±¸Á¶Ã¼
-	human2 h2 = { "È«±æµ¿", 50, "ÀÇÀû" };
-	h2.showHuman2(); // ±¸Á¶Ã¼ ¾È¿¡ ÀÖ´Â ÇÔ¼ö »ç¿ë
+	// C++ êµ¬ì¡°ì²´
+	human2 h2 = { "í™ê¸¸ë™", 50, "ì˜ì " };
+	h2.showHuman2(); // êµ¬ì¡°ì²´ ì•ˆì— ìˆëŠ” í•¨ìˆ˜ ì‚¬ìš©
 
 	return 0;
 }
