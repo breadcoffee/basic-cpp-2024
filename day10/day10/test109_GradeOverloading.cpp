@@ -1,14 +1,18 @@
-#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;
 
 class Grade {
 private:
-	char name[50];
+	char* name;
 	int kr, math, eng;
 public:
-	Grade(const char* myname, int mykr, int mymath, int myeng) : kr(mykr), math(mymath), eng(myeng){
-		strcpy(name, myname);
+	Grade(const char* name, int kr, int math, int eng){
+		this->name = new char[strlen(name) + 1];
+		strcpy(this->name, name);
+		this->kr = kr;
+		this->math = math;
+		this->eng = eng;
 	}
 	Grade operator+(const Grade& pos) const {
 		return Grade(name ,kr + pos.kr, math + pos.math, eng + pos.eng);
@@ -29,26 +33,37 @@ ostream& operator<<(ostream& os, const Grade& pos) {
 class Adder {
 public:
 	Grade operator()(const Grade& pos1, const Grade& pos2, const Grade& pos3) {
-		cout << "전체 성적" << endl;
+		cout << "===============전체 성적===============" << endl;
 		return pos1 + pos2 + pos3;
 	}
 };
 
 int main() {
-	Adder adder;
-	char name[50];
-	int a, b, c;
-	cout << "이름 국어 수학 영어성적을 순서대로 입력하세요 : ";
-	cin >> name >> a >> b >> c;
-	Grade st1(name, a, b, c);
-	st1.ShowGradeInfo();
-	Grade st2("김철수", 98, 98, 98);
-	st2.ShowGradeInfo();
-	Grade st3("이주원", 100, 100, 100);
-	st3.ShowGradeInfo();
-	cout << endl;
+	Grade* gradeAry[3];	// 객체 포인터 배열
 
-	cout << adder(st1, st2, st3) << endl;
+	Adder adder;
+	char name[20];
+	int inKr, inMath, inEng;
+
+	for (int i = 0; i < 3; i++) {
+		cout << "이름 : ";
+		cin >> name;
+		cout << "국어점수 : ";
+		cin >> inKr;
+		cout << "수학점수 : ";
+		cin >> inMath;
+		cout << "영어점수 : ";
+		cin >> inEng;
+
+		gradeAry[i] = new Grade(name, inKr, inMath, inEng);
+		gradeAry[i]->ShowGradeInfo();
+	}
+	// 연산자 오버로딩으로 과목별 총점 평균 계산
+	cout << adder(*gradeAry[0], *gradeAry[1], *gradeAry[2]) << endl;
+
+	for (int i = 0; i < 3; i++) {
+		delete gradeAry[i];
+	}
 
 	return 0;
 }
