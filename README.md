@@ -439,6 +439,7 @@
 - 템플릿(Template)1(test 115 ~ 118)
 	- 함수 템플릿은 함수를 만드는 도구가 된다.
 	- 함수의 기능은 결정되어있지만 자료형은 결정되어있지 않을때 사용한다.
+	- 둘 이상의 자료형도 사용 가능하다.
 	
 	```C++
 	template <typename T>
@@ -447,3 +448,37 @@
 	}
 	```
 
+## 12일차
+- 템플릿(Template)1
+	- 클래스 템플릿
+		- 클래스도 템플릿으로 사용 가능하다.
+		- 단, 객체생성시 반드시 자료형 정보를 명시하도록 되어있다.
+		
+	```C++
+	template <typename T>
+	class Point {
+	private:
+		T xpos, ypos;
+	public:
+		Point(T x=0, T y=0) : xpos(x), ypos(y) {}
+		void ShowPosition() const {
+			cout << '[' << xpos << ", " << ypos << ']' << endl;
+		}
+	};
+	
+	int main() {
+		Point<int> pos1(3, 4);	// 자료형 int 명시
+		pos1.ShowPosition();
+
+		Point<double> pos2(2.4, 3.6);	// 자료형 double 명시
+		pos2.ShowPosition();
+
+		Point<char> pos3('P', 'F');	// 자료형 char 명시
+		pos3.ShowPosition();
+
+		return 0;
+	}
+	```
+	
+- 템플릿(Template)2
+	
