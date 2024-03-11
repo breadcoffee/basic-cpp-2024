@@ -16,9 +16,9 @@ public:
 		strcpy(this->producer, producer);
 	}
 	void ShowProductInfo() {
-		cout << "»óÇ° ID : " << id << endl;
-		cout << "»óÇ° °¡°Ý : " << price << endl;
-		cout << "»óÇ° Á¦ÀÛ»ç : " << producer << endl;
+		cout << "ìƒí’ˆ ID : " << id << endl;
+		cout << "ìƒí’ˆ ê°€ê²© : " << price << endl;
+		cout << "ìƒí’ˆ ì œìž‘ì‚¬ : " << producer << endl;
 	}
 	void addProduct() {
 		
@@ -41,23 +41,23 @@ public:
 		strcpy(this->title, title);
 	}
 	void addBookProduct() {
-		cout << "Ã¥ ISBN ÀÔ·Â : ";
+		cout << "ì±… ISBN ìž…ë ¥ : ";
 		cin >> ISBN;
-		cout << "Ã¥ ÀÛ°¡ ÀÔ·Â : ";
+		cout << "ì±… ìž‘ê°€ ìž…ë ¥ : ";
 		cin >> author;
-		cout << "Ã¥ Á¦¸ñ ÀÔ·Â : ";
+		cout << "ì±… ì œëª© ìž…ë ¥ : ";
 		cin >> title;
-		cout << "Ã¥ÀÌ Ãß°¡ µÇ¾ú½À´Ï´Ù" << endl;
+		cout << "ì±…ì´ ì¶”ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤" << endl;
 	}
 	void ShowBookInfo() {
 		ShowProductInfo();
-		cout << "Ã¥ ISBN : " << ISBN << endl;
-		cout << "Ã¥ ÀÛ°¡ : " << author << endl;
-		cout << "Ã¥ Á¦¸ñ : " << title << endl;
+		cout << "ì±… ISBN : " << ISBN << endl;
+		cout << "ì±… ìž‘ê°€ : " << author << endl;
+		cout << "ì±… ì œëª© : " << title << endl;
 	}
 	void SearchBook(const char* title) {
 		if(this->title == title){
-			cout << "Ã£À¸½Ã´Â Ã¥ : " << title << "ÀÖ½À´Ï´Ù" << endl;
+			cout << "ì°¾ìœ¼ì‹œëŠ” ì±… : " << title << "ìžˆìŠµë‹ˆë‹¤" << endl;
 		}
 	}
 	~Book(){}
@@ -99,28 +99,28 @@ int main(){
 	ProductHandler handler;
 
 	do {
-		cout << "----»óÇ°°ü¸® ÇÁ·Î±×·¥----" << endl;
-		cout << "1. »óÇ°Ãß°¡  2. »óÇ°Ãâ·Â  3. »óÇ°°Ë»ö  0. Á¾·á" << endl;
+		cout << "----ìƒí’ˆê´€ë¦¬ í”„ë¡œê·¸ëž¨----" << endl;
+		cout << "1. ìƒí’ˆì¶”ê°€  2. ìƒí’ˆì¶œë ¥  3. ìƒí’ˆê²€ìƒ‰  0. ì¢…ë£Œ" << endl;
 		cout << "-> ";
 		cin >> menu;
 
-		cout << "1. Ã¥  2. ÇÚµåÆù  3. ÄÄÇ»ÅÍ Áß °í¸£½Ã¿À" << endl;
+		cout << "1. ì±…  2. í•¸ë“œí°  3. ì»´í“¨í„° ì¤‘ ê³ ë¥´ì‹œì˜¤" << endl;
 		cout << "-> ";
 		cin >> choice;
 
 		if (menu == 1) {
-			cout << "»óÇ° ID ÀÔ·Â : ";
+			cout << "ìƒí’ˆ ID ìž…ë ¥ : ";
 			cin >> id;
-			cout << "»óÇ° °¡°Ý ÀÔ·Â : ";
+			cout << "ìƒí’ˆ ê°€ê²© ìž…ë ¥ : ";
 			cin >> price;
-			cout << "»óÇ° Á¦ÀÛ»ç ÀÔ·Â : ";
+			cout << "ìƒí’ˆ ì œìž‘ì‚¬ ìž…ë ¥ : ";
 			cin >> producer;
 			if (choice == 1) {
-				cout << "Ã¥ ISBN ÀÔ·Â : ";
+				cout << "ì±… ISBN ìž…ë ¥ : ";
 				cin >> ISBN;
-				cout << "Ã¥ ÀÛ°¡ ÀÔ·Â : ";
+				cout << "ì±… ìž‘ê°€ ìž…ë ¥ : ";
 				cin >> author;
-				cout << "Ã¥ Á¦¸ñ ÀÔ·Â : ";
+				cout << "ì±… ì œëª© ìž…ë ¥ : ";
 				cin >> title;
 				handler.AddProduct(new Book(id, price, producer, ISBN, author, title));
 				continue;

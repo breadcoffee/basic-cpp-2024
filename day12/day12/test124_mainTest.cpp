@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
 		printf("argv[%d]: %s\n", i, argv[i]);
 	}
 
-	printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n");
+	printf("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.\n");
 
 	return 0;
 }

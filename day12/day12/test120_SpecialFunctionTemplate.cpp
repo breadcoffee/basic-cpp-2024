@@ -16,18 +16,18 @@ char* Max(char* a, char* b) {
 template <>
 const char* Max(const char* a, const char* b) {
 	cout << "const char* Max <const char*>(const char* a, const char* b)" << endl;
-	return strcmp(a, b) > 0 ? a : b;	// strcmp : µÎ °³ÀÇ ¹®ÀÚ¿­ ±æÀÌ, ±×¸®°í ¹®ÀÚÀÇ Å©±â¸¦ ºñ±³ a°¡ Å©¸é 1, °°À¸¸é 0, b°¡ Å©¸é -1·Î Ãâ·Â
+	return strcmp(a, b) > 0 ? a : b;	// strcmp : ë‘ ê°œì˜ ë¬¸ìì—´ ê¸¸ì´, ê·¸ë¦¬ê³  ë¬¸ìì˜ í¬ê¸°ë¥¼ ë¹„êµ aê°€ í¬ë©´ 1, ê°™ìœ¼ë©´ 0, bê°€ í¬ë©´ -1ë¡œ ì¶œë ¥
 }
 
 int main() {
 	cout << Max(11, 15) << endl;
 	cout << Max('T', 'Q') << endl;
 	cout << Max(3.5, 7.5) << endl;
-	cout << Max("Simple", "Best") << endl;	// const char* Çü È£Ãâ
+	cout << Max("Simple", "Best") << endl;	// const char* í˜• í˜¸ì¶œ
 
 	char str1[] = "Simple";
 	char str2[] = "Best";
-	cout << Max(str1, str2) << endl;		// char* Çü È£Ãâ
+	cout << Max(str1, str2) << endl;		// char* í˜• í˜¸ì¶œ
 
 	return 0;
 }
