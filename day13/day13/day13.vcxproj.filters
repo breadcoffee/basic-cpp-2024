@@ -24,5 +24,8 @@
     <ClCompile Include="test128_VectorTest.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\day12\day12\test125_ProductClass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
