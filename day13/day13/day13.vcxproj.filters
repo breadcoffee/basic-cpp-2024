@@ -18,5 +18,11 @@
     <ClCompile Include="test126_Exception.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="test127_Vector01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test128_VectorTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

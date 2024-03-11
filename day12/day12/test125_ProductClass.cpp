@@ -26,7 +26,7 @@ public:
 	}
 	~Product() {
 
-	}
+	}  
 };
 
 class Book : public Product{
